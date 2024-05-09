@@ -370,7 +370,7 @@ UITextSizeConstraint_13.Parent = TextButton_12
 UITextSizeConstraint_13.MaxTextSize = 18
 
 UIScale.Parent = Main
-UIScale.Scale = 0.900
+UIScale.Scale = 0.7
 
 Outdated.Name = "Outdated"
 Outdated.Parent = ConesFEGui
