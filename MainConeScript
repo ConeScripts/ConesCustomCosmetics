@@ -13,14 +13,16 @@ local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
 local Frame = Instance.new("ScrollingFrame")
 local UICorner_2 = Instance.new("UICorner")
 local ClippingFix = Instance.new("Frame")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local Pages = Instance.new("Frame")
+local NSFW = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
 local TextButton = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
-local UIListLayout = Instance.new("UIListLayout")
 local TextButton_2 = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
-local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
 local TextButton_3 = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
@@ -45,33 +47,47 @@ local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
 local TextButton_10 = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
 local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+local MainCosmetics = Instance.new("Frame")
+local UIListLayout_2 = Instance.new("UIListLayout")
 local TextButton_11 = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
 local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
+local Settings = Instance.new("Frame")
+local UIListLayout_3 = Instance.new("UIListLayout")
 local TextButton_12 = Instance.new("TextButton")
 local UICorner_14 = Instance.new("UICorner")
 local UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
 local UIScale = Instance.new("UIScale")
+local MenuSelector = Instance.new("Frame")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local UICorner_15 = Instance.new("UICorner")
+local UIListLayout_4 = Instance.new("UIListLayout")
+local MainCosmetics_2 = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local NSFW_2 = Instance.new("TextButton")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local Settings_2 = Instance.new("TextButton")
+local ImageLabel_3 = Instance.new("ImageLabel")
 local Outdated = Instance.new("Frame")
 local Main_2 = Instance.new("Frame")
-local UICorner_15 = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
-local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
-local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
-local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
-local Frame_2 = Instance.new("Frame")
 local UICorner_16 = Instance.new("UICorner")
-local ClippingFix_2 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
 local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
-local TextButton_13 = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
 local UICorner_17 = Instance.new("UICorner")
+local ClippingFix_2 = Instance.new("Frame")
 local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local TextButton_13 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
 local UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint")
 local TextLabel_3 = Instance.new("TextLabel")
 local UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
 local TextLabel_4 = Instance.new("TextLabel")
 local UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
-
+local JoinDebounce = false
 --Properties:
 
 ConesFEGui.Name = "Cones FE Gui"
@@ -137,14 +153,39 @@ ClippingFix.BorderSizePixel = 0
 ClippingFix.Size = UDim2.new(1, 0, 0.0120000001, 0)
 ClippingFix.ZIndex = 0
 
-TextButton.Parent = Frame
+UIAspectRatioConstraint_3.Parent = Frame
+UIAspectRatioConstraint_3.AspectRatio = 1.865
+
+Pages.Name = "Pages"
+Pages.Parent = Frame
+Pages.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pages.BackgroundTransparency = 11.000
+Pages.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Pages.BorderSizePixel = 0
+Pages.Size = UDim2.new(1, 0, 1, 0)
+
+NSFW.Name = "NSFW"
+NSFW.Parent = Pages
+NSFW.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NSFW.BackgroundTransparency = 11.000
+NSFW.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NSFW.BorderSizePixel = 0
+NSFW.Position = UDim2.new(0, 0, 0.0348875262, 0)
+NSFW.Size = UDim2.new(1, 0, 0.965112627, 0)
+NSFW.Visible = false
+
+UIListLayout.Parent = NSFW
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 12)
+
+TextButton.Parent = NSFW
 TextButton.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
 TextButton.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton.Size = UDim2.new(1, 0, 0.0700000003, 0)
 TextButton.Font = Enum.Font.SourceSansBold
-TextButton.Text = "Wear Tophat"
+TextButton.Text = "Cum [Dick]"
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextScaled = true
 TextButton.TextSize = 18.000
@@ -156,18 +197,14 @@ UICorner_3.Parent = TextButton
 UITextSizeConstraint_2.Parent = TextButton
 UITextSizeConstraint_2.MaxTextSize = 18
 
-UIListLayout.Parent = Frame
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 12)
-
-TextButton_2.Parent = Frame
+TextButton_2.Parent = NSFW
 TextButton_2.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
 TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.BorderSizePixel = 0
 TextButton_2.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_2.Size = UDim2.new(1, 0, 0.0700000003, 0)
 TextButton_2.Font = Enum.Font.SourceSansBold
-TextButton_2.Text = "Wear Dominus"
+TextButton_2.Text = "Remove Shirt And Pants [Dick]"
 TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.TextScaled = true
 TextButton_2.TextSize = 18.000
@@ -179,10 +216,7 @@ UICorner_4.Parent = TextButton_2
 UITextSizeConstraint_3.Parent = TextButton_2
 UITextSizeConstraint_3.MaxTextSize = 18
 
-UIAspectRatioConstraint_3.Parent = Frame
-UIAspectRatioConstraint_3.AspectRatio = 1.865
-
-TextButton_3.Parent = Frame
+TextButton_3.Parent = NSFW
 TextButton_3.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
 TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.BorderSizePixel = 0
@@ -201,14 +235,15 @@ UICorner_5.Parent = TextButton_3
 UITextSizeConstraint_4.Parent = TextButton_3
 UITextSizeConstraint_4.MaxTextSize = 18
 
-TextButton_4.Parent = Frame
-TextButton_4.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_4.Parent = NSFW
+TextButton_4.BackgroundColor3 = Color3.fromRGB(235, 99, 99)
 TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_4.BorderSizePixel = 0
 TextButton_4.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_4.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_4.Visible = false
 TextButton_4.Font = Enum.Font.SourceSansBold
-TextButton_4.Text = "Remove Shirt And Pants [Dick]"
+TextButton_4.Text = "Owner Tag"
 TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_4.TextScaled = true
 TextButton_4.TextSize = 18.000
@@ -220,14 +255,15 @@ UICorner_6.Parent = TextButton_4
 UITextSizeConstraint_5.Parent = TextButton_4
 UITextSizeConstraint_5.MaxTextSize = 18
 
-TextButton_5.Parent = Frame
-TextButton_5.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_5.Parent = NSFW
+TextButton_5.BackgroundColor3 = Color3.fromRGB(235, 99, 99)
 TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_5.BorderSizePixel = 0
 TextButton_5.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_5.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_5.Visible = false
 TextButton_5.Font = Enum.Font.SourceSansBold
-TextButton_5.Text = "Cum [Dick]"
+TextButton_5.Text = "D3Von Tag"
 TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_5.TextScaled = true
 TextButton_5.TextSize = 18.000
@@ -239,15 +275,14 @@ UICorner_7.Parent = TextButton_5
 UITextSizeConstraint_6.Parent = TextButton_5
 UITextSizeConstraint_6.MaxTextSize = 18
 
-TextButton_6.Parent = Frame
-TextButton_6.BackgroundColor3 = Color3.fromRGB(235, 99, 99)
+TextButton_6.Parent = NSFW
+TextButton_6.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
 TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_6.BorderSizePixel = 0
 TextButton_6.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_6.Size = UDim2.new(1, 0, 0.0700000003, 0)
-TextButton_6.Visible = false
 TextButton_6.Font = Enum.Font.SourceSansBold
-TextButton_6.Text = "Owner Tag"
+TextButton_6.Text = "Dick Color Normal"
 TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_6.TextScaled = true
 TextButton_6.TextSize = 18.000
@@ -259,15 +294,14 @@ UICorner_8.Parent = TextButton_6
 UITextSizeConstraint_7.Parent = TextButton_6
 UITextSizeConstraint_7.MaxTextSize = 18
 
-TextButton_7.Parent = Frame
-TextButton_7.BackgroundColor3 = Color3.fromRGB(235, 99, 99)
+TextButton_7.Parent = NSFW
+TextButton_7.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
 TextButton_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_7.BorderSizePixel = 0
 TextButton_7.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_7.Size = UDim2.new(1, 0, 0.0700000003, 0)
-TextButton_7.Visible = false
 TextButton_7.Font = Enum.Font.SourceSansBold
-TextButton_7.Text = "D3Von Tag"
+TextButton_7.Text = "Dick Color Blue"
 TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_7.TextScaled = true
 TextButton_7.TextSize = 18.000
@@ -279,14 +313,14 @@ UICorner_9.Parent = TextButton_7
 UITextSizeConstraint_8.Parent = TextButton_7
 UITextSizeConstraint_8.MaxTextSize = 18
 
-TextButton_8.Parent = Frame
+TextButton_8.Parent = NSFW
 TextButton_8.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
 TextButton_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_8.BorderSizePixel = 0
 TextButton_8.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_8.Size = UDim2.new(1, 0, 0.0700000003, 0)
 TextButton_8.Font = Enum.Font.SourceSansBold
-TextButton_8.Text = "Dick Color Normal"
+TextButton_8.Text = "Dick Color Orange"
 TextButton_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_8.TextScaled = true
 TextButton_8.TextSize = 18.000
@@ -298,14 +332,14 @@ UICorner_10.Parent = TextButton_8
 UITextSizeConstraint_9.Parent = TextButton_8
 UITextSizeConstraint_9.MaxTextSize = 18
 
-TextButton_9.Parent = Frame
+TextButton_9.Parent = NSFW
 TextButton_9.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
 TextButton_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_9.BorderSizePixel = 0
 TextButton_9.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_9.Size = UDim2.new(1, 0, 0.0700000003, 0)
 TextButton_9.Font = Enum.Font.SourceSansBold
-TextButton_9.Text = "Dick Color Blue"
+TextButton_9.Text = "Dick Color Yellow"
 TextButton_9.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_9.TextScaled = true
 TextButton_9.TextSize = 18.000
@@ -317,14 +351,14 @@ UICorner_11.Parent = TextButton_9
 UITextSizeConstraint_10.Parent = TextButton_9
 UITextSizeConstraint_10.MaxTextSize = 18
 
-TextButton_10.Parent = Frame
+TextButton_10.Parent = NSFW
 TextButton_10.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
 TextButton_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_10.BorderSizePixel = 0
 TextButton_10.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_10.Size = UDim2.new(1, 0, 0.0700000003, 0)
 TextButton_10.Font = Enum.Font.SourceSansBold
-TextButton_10.Text = "Dick Color Orange"
+TextButton_10.Text = "Dick Color Green"
 TextButton_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_10.TextScaled = true
 TextButton_10.TextSize = 18.000
@@ -336,14 +370,27 @@ UICorner_12.Parent = TextButton_10
 UITextSizeConstraint_11.Parent = TextButton_10
 UITextSizeConstraint_11.MaxTextSize = 18
 
-TextButton_11.Parent = Frame
+MainCosmetics.Name = "MainCosmetics"
+MainCosmetics.Parent = Pages
+MainCosmetics.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainCosmetics.BackgroundTransparency = 11.000
+MainCosmetics.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainCosmetics.BorderSizePixel = 0
+MainCosmetics.Position = UDim2.new(0, 0, 0.0348875262, 0)
+MainCosmetics.Size = UDim2.new(1, 0, 0.965112627, 0)
+
+UIListLayout_2.Parent = MainCosmetics
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 12)
+
+TextButton_11.Parent = MainCosmetics
 TextButton_11.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
 TextButton_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_11.BorderSizePixel = 0
 TextButton_11.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_11.Size = UDim2.new(1, 0, 0.0700000003, 0)
 TextButton_11.Font = Enum.Font.SourceSansBold
-TextButton_11.Text = "Dick Color Yellow"
+TextButton_11.Text = "Wear Dominus"
 TextButton_11.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_11.TextScaled = true
 TextButton_11.TextSize = 18.000
@@ -355,14 +402,28 @@ UICorner_13.Parent = TextButton_11
 UITextSizeConstraint_12.Parent = TextButton_11
 UITextSizeConstraint_12.MaxTextSize = 18
 
-TextButton_12.Parent = Frame
-TextButton_12.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+Settings.Name = "Settings"
+Settings.Parent = Pages
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 11.000
+Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0, 0, 0.0348875262, 0)
+Settings.Size = UDim2.new(1, 0, 0.965112627, 0)
+Settings.Visible = false
+
+UIListLayout_3.Parent = Settings
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0, 12)
+
+TextButton_12.Parent = Settings
+TextButton_12.BackgroundColor3 = Color3.fromRGB(134, 97, 61)
 TextButton_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_12.BorderSizePixel = 0
 TextButton_12.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_12.Size = UDim2.new(1, 0, 0.0700000003, 0)
 TextButton_12.Font = Enum.Font.SourceSansBold
-TextButton_12.Text = "Dick Color Green"
+TextButton_12.Text = "Hide NSFW [NW]"
 TextButton_12.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_12.TextScaled = true
 TextButton_12.TextSize = 18.000
@@ -375,7 +436,91 @@ UITextSizeConstraint_13.Parent = TextButton_12
 UITextSizeConstraint_13.MaxTextSize = 18
 
 UIScale.Parent = Main
-UIScale.Scale = 0.75
+UIScale.Scale = 0.750
+
+MenuSelector.Name = "MenuSelector"
+MenuSelector.Parent = Main
+MenuSelector.AnchorPoint = Vector2.new(1, 0.5)
+MenuSelector.BackgroundColor3 = Color3.fromRGB(40, 30, 16)
+MenuSelector.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MenuSelector.BorderSizePixel = 0
+MenuSelector.Position = UDim2.new(0, 0, 4.7926383, 0)
+MenuSelector.Size = UDim2.new(0.176827699, 0, 9.5852766, 0)
+
+UIAspectRatioConstraint_4.Parent = MenuSelector
+UIAspectRatioConstraint_4.AspectRatio = 0.305
+
+UICorner_15.CornerRadius = UDim.new(0, 3)
+UICorner_15.Parent = MenuSelector
+
+UIListLayout_4.Parent = MenuSelector
+UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_4.Padding = UDim.new(0, 3)
+
+MainCosmetics_2.Name = "MainCosmetics"
+MainCosmetics_2.Parent = MenuSelector
+MainCosmetics_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainCosmetics_2.BackgroundTransparency = 1.000
+MainCosmetics_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainCosmetics_2.BorderSizePixel = 0
+MainCosmetics_2.Size = UDim2.new(0.708333611, 0, 0.0900000036, 0)
+MainCosmetics_2.Font = Enum.Font.SourceSansBold
+MainCosmetics_2.Text = "Home"
+MainCosmetics_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainCosmetics_2.TextSize = 17.000
+
+ImageLabel.Parent = MainCosmetics_2
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 11.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.862745106, 0, 0, 0)
+ImageLabel.Size = UDim2.new(0.411764741, 0, 1, 0)
+ImageLabel.Image = "rbxassetid://6034798461"
+
+NSFW_2.Name = "NSFW"
+NSFW_2.Parent = MenuSelector
+NSFW_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NSFW_2.BackgroundTransparency = 1.000
+NSFW_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NSFW_2.BorderSizePixel = 0
+NSFW_2.Size = UDim2.new(0.708333611, 0, 0.0900000036, 0)
+NSFW_2.Font = Enum.Font.SourceSansBold
+NSFW_2.Text = "NSFW"
+NSFW_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+NSFW_2.TextSize = 17.000
+NSFW_2.TextTransparency = 0.500
+
+ImageLabel_2.Parent = NSFW_2
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 11.000
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(0.890999973, 0, 0.100000001, 0)
+ImageLabel_2.Size = UDim2.new(0.344999999, 0, 0.829999983, 0)
+ImageLabel_2.Image = "rbxassetid://14563958666"
+
+Settings_2.Name = "Settings"
+Settings_2.Parent = MenuSelector
+Settings_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings_2.BackgroundTransparency = 1.000
+Settings_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings_2.BorderSizePixel = 0
+Settings_2.Size = UDim2.new(0.708333611, 0, 0.0900000036, 0)
+Settings_2.Font = Enum.Font.SourceSansBold
+Settings_2.Text = "Settings"
+Settings_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Settings_2.TextSize = 17.000
+Settings_2.TextTransparency = 0.500
+
+ImageLabel_3.Parent = Settings_2
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_3.BackgroundTransparency = 11.000
+ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_3.BorderSizePixel = 0
+ImageLabel_3.Position = UDim2.new(0.98039192, 0, 0, 0)
+ImageLabel_3.Size = UDim2.new(0.411764741, 0, 1, 0)
+ImageLabel_3.Image = "rbxassetid://7059346373"
 
 Outdated.Name = "Outdated"
 Outdated.Parent = ConesFEGui
@@ -397,8 +542,8 @@ Main_2.Position = UDim2.new(0.5, 0, 0.400000006, 0)
 Main_2.Size = UDim2.new(0.200000003, 0, 0.0500000007, 0)
 Main_2.ZIndex = 5
 
-UICorner_15.CornerRadius = UDim.new(0, 3)
-UICorner_15.Parent = Main_2
+UICorner_16.CornerRadius = UDim.new(0, 3)
+UICorner_16.Parent = Main_2
 
 TextLabel_2.Parent = Main_2
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -413,14 +558,14 @@ TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 18.000
 TextLabel_2.TextWrapped = true
 
-UIAspectRatioConstraint_4.Parent = TextLabel_2
-UIAspectRatioConstraint_4.AspectRatio = 24.050
+UIAspectRatioConstraint_5.Parent = TextLabel_2
+UIAspectRatioConstraint_5.AspectRatio = 24.050
 
 UITextSizeConstraint_14.Parent = TextLabel_2
 UITextSizeConstraint_14.MaxTextSize = 18
 
-UIAspectRatioConstraint_5.Parent = Main_2
-UIAspectRatioConstraint_5.AspectRatio = 16.586
+UIAspectRatioConstraint_6.Parent = Main_2
+UIAspectRatioConstraint_6.AspectRatio = 16.586
 
 Frame_2.Parent = Main_2
 Frame_2.BackgroundColor3 = Color3.fromRGB(30, 23, 12)
@@ -431,8 +576,8 @@ Frame_2.Position = UDim2.new(0, 0, 0.689655185, 0)
 Frame_2.Size = UDim2.new(1, 0, 8.89562321, 0)
 Frame_2.ZIndex = 0
 
-UICorner_16.CornerRadius = UDim.new(0, 6)
-UICorner_16.Parent = Frame_2
+UICorner_17.CornerRadius = UDim.new(0, 6)
+UICorner_17.Parent = Frame_2
 
 ClippingFix_2.Name = "ClippingFix"
 ClippingFix_2.Parent = Frame_2
@@ -442,8 +587,8 @@ ClippingFix_2.BorderSizePixel = 0
 ClippingFix_2.Size = UDim2.new(1, 0, 0.0120000001, 0)
 ClippingFix_2.ZIndex = 0
 
-UIAspectRatioConstraint_6.Parent = Frame_2
-UIAspectRatioConstraint_6.AspectRatio = 1.865
+UIAspectRatioConstraint_7.Parent = Frame_2
+UIAspectRatioConstraint_7.AspectRatio = 1.865
 
 TextButton_13.Parent = Frame_2
 TextButton_13.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
@@ -458,11 +603,11 @@ TextButton_13.TextScaled = true
 TextButton_13.TextSize = 18.000
 TextButton_13.TextWrapped = true
 
-UICorner_17.CornerRadius = UDim.new(0, 3)
-UICorner_17.Parent = TextButton_13
+UICorner_18.CornerRadius = UDim.new(0, 3)
+UICorner_18.Parent = TextButton_13
 
-UIAspectRatioConstraint_7.Parent = TextButton_13
-UIAspectRatioConstraint_7.AspectRatio = 16.586
+UIAspectRatioConstraint_8.Parent = TextButton_13
+UIAspectRatioConstraint_8.AspectRatio = 16.586
 
 UITextSizeConstraint_15.Parent = TextButton_13
 UITextSizeConstraint_15.MaxTextSize = 18
@@ -503,7 +648,7 @@ UITextSizeConstraint_17.MaxTextSize = 18
 
 -- Scripts:
 
-local function UZXLPS_fake_script() -- Main.Smooth GUI Dragging 
+local function GBKUYS_fake_script() -- Main.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Main)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -560,21 +705,8 @@ local function UZXLPS_fake_script() -- Main.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(UZXLPS_fake_script)()
-local function YTRVFEU_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		game:GetService'Players':Chat(("cone_tophat_request"))
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			["Title"] = "Successful";
-			["Text"] = "Command Ran Successfully.";
-			["Duration"] = string.len("Command Ran Successfully.")*0.1;
-		})
-	end)
-end
-coroutine.wrap(YTRVFEU_fake_script)()
-local function XMGHM_fake_script() -- Frame.LocalScript 
+coroutine.wrap(GBKUYS_fake_script)()
+local function ZHBJOC_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.CanvasSize = UDim2.new(0,0,1,0)
@@ -636,30 +768,13 @@ local function XMGHM_fake_script() -- Frame.LocalScript
 			end
 		end
 		
-		if msg == "cone_normal" then
-			if plr:FindFirstChild("CustomColor") then
-				plr.CustomColor.Value = Color3.fromRGB(239, 97, 97)
-			else
-				local CustomColor = Instance.new("Color3Value",plr)
-				CustomColor.Name = "CustomColor"
-				CustomColor = Color3.fromRGB(239, 97, 97)
-			end
-		end
-		if msg == "cone_normal" then
-			if plr:FindFirstChild("CustomColor") then
-				plr.CustomColor.Value = Color3.fromRGB(239, 97, 97)
-			else
-				local CustomColor = Instance.new("Color3Value",plr)
-				CustomColor.Name = "CustomColor"
-				CustomColor = Color3.fromRGB(239, 97, 97)
-			end
-		end
 		
 		--DCOLORS--
 		if msg == "cone_user_join" then
-			if plr == game.Players.LocalPlayer then
+			if plr == game.Players.LocalPlayer or JoinDebounce then
 				
 				else
+                JoinDebounce = true
 			game:GetService("StarterGui"):SetCore("SendNotification", {
 				["Title"] = "Player Joined";
 				["Text"] = "Player Detected Using Script! "..plr.Name;
@@ -701,6 +816,8 @@ local function XMGHM_fake_script() -- Frame.LocalScript
 					if Assigned == false then
 						warn("Could not assign custom color!")
 					end
+                    task.wait(0.1)
+                    JoinDebounce = false
 				end
 				end
 		elseif msg == "cone_tophat_request" then
@@ -1293,6 +1410,9 @@ local function XMGHM_fake_script() -- Frame.LocalScript
 					ProximityPrompt.ActionText = "Suck Dick [UNFINISHED]"
 					ProximityPrompt.RequiresLineOfSight = false
 					ProximityPrompt.ObjectText = "Suck"
+                    if plr == game.Players.LocalPlayer then
+                        ProximityPrompt.Enabled = false
+                    end
 					ProximityPrompt.Triggered:Connect(function(plr)
 						print(""..plr.Name.." Triggered")
 					end)
@@ -1483,7 +1603,7 @@ local function XMGHM_fake_script() -- Frame.LocalScript
 	task.spawn(function()
 		while task.wait(1) do
 			local VersionNumber = game:HttpGet('https://pastebin.com/raw/405jcNjy')
-			if "1.0.2" == VersionNumber then
+			if "1.0.3" == VersionNumber then
 				
 			else
 				script.Parent.Parent.Parent.Outdated.Visible = true
@@ -1492,12 +1612,12 @@ local function XMGHM_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XMGHM_fake_script)()
-local function YDLOCS_fake_script() -- TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_2)
+coroutine.wrap(ZHBJOC_fake_script)()
+local function MFRS_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		game:GetService'Players':Chat(("cone_dominus"))
+		game:GetService'Players':Chat(("cone_woah"))
 		game:GetService("StarterGui"):SetCore("SendNotification", {
 			["Title"] = "Successful";
 			["Text"] = "Command Ran Successfully.";
@@ -1505,8 +1625,21 @@ local function YDLOCS_fake_script() -- TextButton_2.LocalScript
 		})
 	end)
 end
-coroutine.wrap(YDLOCS_fake_script)()
-local function GSXC_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(MFRS_fake_script)()
+local function VHWO_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_yo"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(VHWO_fake_script)()
+local function HLYQM_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1518,35 +1651,9 @@ local function GSXC_fake_script() -- TextButton_3.LocalScript
 		})
 	end)
 end
-coroutine.wrap(GSXC_fake_script)()
-local function OEOF_fake_script() -- TextButton_4.LocalScript 
+coroutine.wrap(HLYQM_fake_script)()
+local function QLUEI_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		game:GetService'Players':Chat(("cone_yo"))
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			["Title"] = "Successful";
-			["Text"] = "Command Ran Successfully.";
-			["Duration"] = string.len("Command Ran Successfully.")*0.1;
-		})
-	end)
-end
-coroutine.wrap(OEOF_fake_script)()
-local function UKNKIQ_fake_script() -- TextButton_5.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_5)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		game:GetService'Players':Chat(("cone_woah"))
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			["Title"] = "Successful";
-			["Text"] = "Command Ran Successfully.";
-			["Duration"] = string.len("Command Ran Successfully.")*0.1;
-		})
-	end)
-end
-coroutine.wrap(UKNKIQ_fake_script)()
-local function DAMRGP_fake_script() -- TextButton_6.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_6)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService'Players':Chat(("cone_9"))
@@ -1557,9 +1664,9 @@ local function DAMRGP_fake_script() -- TextButton_6.LocalScript
 		})
 	end)
 end
-coroutine.wrap(DAMRGP_fake_script)()
-local function RZVKN_fake_script() -- TextButton_7.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_7)
+coroutine.wrap(QLUEI_fake_script)()
+local function WMSW_fake_script() -- TextButton_5.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService'Players':Chat(("cone_7"))
@@ -1570,9 +1677,9 @@ local function RZVKN_fake_script() -- TextButton_7.LocalScript
 		})
 	end)
 end
-coroutine.wrap(RZVKN_fake_script)()
-local function IHVVQ_fake_script() -- TextButton_8.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_8)
+coroutine.wrap(WMSW_fake_script)()
+local function GBUNTP_fake_script() -- TextButton_6.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_6)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService'Players':Chat(("cone_normal"))
@@ -1583,9 +1690,9 @@ local function IHVVQ_fake_script() -- TextButton_8.LocalScript
 		})
 	end)
 end
-coroutine.wrap(IHVVQ_fake_script)()
-local function PYHTF_fake_script() -- TextButton_9.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_9)
+coroutine.wrap(GBUNTP_fake_script)()
+local function OWRGOBM_fake_script() -- TextButton_7.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_7)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService'Players':Chat(("cone_blue"))
@@ -1596,9 +1703,9 @@ local function PYHTF_fake_script() -- TextButton_9.LocalScript
 		})
 	end)
 end
-coroutine.wrap(PYHTF_fake_script)()
-local function ICDIB_fake_script() -- TextButton_10.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_10)
+coroutine.wrap(OWRGOBM_fake_script)()
+local function MNOEG_fake_script() -- TextButton_8.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_8)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService'Players':Chat(("cone_orange"))
@@ -1609,9 +1716,9 @@ local function ICDIB_fake_script() -- TextButton_10.LocalScript
 		})
 	end)
 end
-coroutine.wrap(ICDIB_fake_script)()
-local function UAIFHPD_fake_script() -- TextButton_11.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_11)
+coroutine.wrap(MNOEG_fake_script)()
+local function RMKQWL_fake_script() -- TextButton_9.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_9)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService'Players':Chat(("cone_yellow"))
@@ -1622,9 +1729,9 @@ local function UAIFHPD_fake_script() -- TextButton_11.LocalScript
 		})
 	end)
 end
-coroutine.wrap(UAIFHPD_fake_script)()
-local function KTPU_fake_script() -- TextButton_12.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_12)
+coroutine.wrap(RMKQWL_fake_script)()
+local function ROPKMT_fake_script() -- TextButton_10.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_10)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game:GetService'Players':Chat(("cone_green"))
@@ -1635,12 +1742,179 @@ local function KTPU_fake_script() -- TextButton_12.LocalScript
 		})
 	end)
 end
-coroutine.wrap(KTPU_fake_script)()
-local function THVLXG_fake_script() -- TextButton_13.LocalScript 
+coroutine.wrap(ROPKMT_fake_script)()
+local function CCYVF_fake_script() -- TextButton_11.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_11)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_dominus"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(CCYVF_fake_script)()
+local function QAHIX_fake_script() -- TextButton_12.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_12)
+
+	local Enabled = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if Enabled == false then
+			Enabled = true
+			game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(235, 171, 107)}):Play()
+			for i,v in pairs(game.Players:GetPlayers()) do
+				if v.Character:FindFirstChild("Model1") and Enabled then
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
+				else
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
+				end
+			end
+		else
+			Enabled = false
+			game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(134, 97, 61)}):Play()
+			for i,v in pairs(game.Players:GetPlayers()) do
+				if v.Character:FindFirstChild("Model1") and Enabled then
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
+				else
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
+					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
+				end
+			end
+			end
+	end)
+	
+	for i,v in pairs(game.Players:GetPlayers()) do
+		if v.Character:FindFirstChild("Model1") and Enabled then
+			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
+			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
+			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
+			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
+		else
+			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
+			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
+			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
+			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
+		end
+		
+		v.Character.ChildAdded:Connect(function()
+			if v.Character:FindFirstChild("Model1") and Enabled then
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
+			else
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
+			end
+		end)
+	end
+	
+	game.Players.PlayerAdded:Connect(function(v)
+		v.Character.ChildAdded:Connect(function()
+			if v.Character:FindFirstChild("Model1") and Enabled then
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
+			else
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
+			end
+		end)
+	end)
+end
+coroutine.wrap(QAHIX_fake_script)()
+local function GMDBKAM_fake_script() -- MainCosmetics_2.Script 
+	local script = Instance.new('Script', MainCosmetics_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v:IsA("TextButton") then
+				if v == script.Parent then
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+				else
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0.5}):Play()
+				end
+			end
+		end
+		for i,v in pairs(script.Parent.Parent.Parent.Frame.Pages:GetChildren()) do
+			if v.Name == script.Parent.Name then
+				v.Visible = true
+			else
+				v.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(GMDBKAM_fake_script)()
+local function TXEMQ_fake_script() -- NSFW_2.Script 
+	local script = Instance.new('Script', NSFW_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v:IsA("TextButton") then
+				if v == script.Parent then
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+				else
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0.5}):Play()
+				end
+			end
+		end
+		for i,v in pairs(script.Parent.Parent.Parent.Frame.Pages:GetChildren()) do
+			if v.Name == script.Parent.Name then
+				v.Visible = true
+			else
+				v.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(TXEMQ_fake_script)()
+local function ONQBY_fake_script() -- Settings_2.Script 
+	local script = Instance.new('Script', Settings_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v:IsA("TextButton") then
+				if v == script.Parent then
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+				else
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0.5}):Play()
+				end
+			end
+		end
+		for i,v in pairs(script.Parent.Parent.Parent.Frame.Pages:GetChildren()) do
+			if v.Name == script.Parent.Name then
+				v.Visible = true
+			else
+				v.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(ONQBY_fake_script)()
+local function CMJGHL_fake_script() -- TextButton_13.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_13)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(THVLXG_fake_script)()
+coroutine.wrap(CMJGHL_fake_script)()
