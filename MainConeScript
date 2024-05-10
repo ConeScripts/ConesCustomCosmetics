@@ -1439,8 +1439,6 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 					local modules = {}
 	
 					--// Scripts
-					modrod4.CanCollide = false
-					particle.CanCollide = false
 					-- Script
 					task.spawn(function()
 						local script = script
