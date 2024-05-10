@@ -816,7 +816,7 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 					if Assigned == false then
 						warn("Could not assign custom color!")
 					end
-                    task.wait(0.1)
+                    wait()
                     JoinDebounce = false
 				end
 				end
