@@ -87,7 +87,7 @@ local TextLabel_3 = Instance.new("TextLabel")
 local UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
 local TextLabel_4 = Instance.new("TextLabel")
 local UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
-local JoinDebounce = false
+
 --Properties:
 
 ConesFEGui.Name = "Cones FE Gui"
@@ -423,7 +423,7 @@ TextButton_12.BorderSizePixel = 0
 TextButton_12.Position = UDim2.new(0, 0, 0.0542692281, 0)
 TextButton_12.Size = UDim2.new(1, 0, 0.0700000003, 0)
 TextButton_12.Font = Enum.Font.SourceSansBold
-TextButton_12.Text = "Hide NSFW [NW]"
+TextButton_12.Text = "Hide NSFW [BETA]"
 TextButton_12.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_12.TextScaled = true
 TextButton_12.TextSize = 18.000
@@ -648,7 +648,7 @@ UITextSizeConstraint_17.MaxTextSize = 18
 
 -- Scripts:
 
-local function GBKUYS_fake_script() -- Main.Smooth GUI Dragging 
+local function MMKGY_fake_script() -- Main.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Main)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -705,8 +705,8 @@ local function GBKUYS_fake_script() -- Main.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(GBKUYS_fake_script)()
-local function ZHBJOC_fake_script() -- Frame.LocalScript 
+coroutine.wrap(MMKGY_fake_script)()
+local function SODKYAM_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.CanvasSize = UDim2.new(0,0,1,0)
@@ -728,7 +728,7 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 			end
 		end
 		
-		if msg == "cone_orange" then
+		if msg == "cone_orang" then
 			if plr:FindFirstChild("CustomColor") then
 				plr.CustomColor.Value = Color3.fromRGB(255, 130, 67)
 			else
@@ -748,7 +748,7 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 			end
 		end
 		
-		if msg == "cone_green" then
+		if msg == "cone_gnarp" then
 			if plr:FindFirstChild("CustomColor") then
 				plr.CustomColor.Value = Color3.fromRGB(111, 239, 91)
 			else
@@ -768,13 +768,30 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 			end
 		end
 		
+		if msg == "cone_normal" then
+			if plr:FindFirstChild("CustomColor") then
+				plr.CustomColor.Value = Color3.fromRGB(239, 97, 97)
+			else
+				local CustomColor = Instance.new("Color3Value",plr)
+				CustomColor.Name = "CustomColor"
+				CustomColor = Color3.fromRGB(239, 97, 97)
+			end
+		end
+		if msg == "cone_normal" then
+			if plr:FindFirstChild("CustomColor") then
+				plr.CustomColor.Value = Color3.fromRGB(239, 97, 97)
+			else
+				local CustomColor = Instance.new("Color3Value",plr)
+				CustomColor.Name = "CustomColor"
+				CustomColor = Color3.fromRGB(239, 97, 97)
+			end
+		end
 		
 		--DCOLORS--
 		if msg == "cone_user_join" then
-			if plr == game.Players.LocalPlayer or JoinDebounce then
+			if plr == game.Players.LocalPlayer then
 				
 				else
-                JoinDebounce = true
 			game:GetService("StarterGui"):SetCore("SendNotification", {
 				["Title"] = "Player Joined";
 				["Text"] = "Player Detected Using Script! "..plr.Name;
@@ -798,7 +815,7 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 					local Assigned = false
 					if game.Players.LocalPlayer.CustomColor.Value == Color3.fromRGB(255, 130, 67) then
 						Assigned = true
-						game:GetService'Players':Chat(("cone_orange"))
+						game:GetService'Players':Chat(("cone_orang"))
 					end
 					if game.Players.LocalPlayer.CustomColor.Value == Color3.fromRGB(239, 207, 91) then
 						Assigned = true
@@ -806,7 +823,7 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 					end
 					if game.Players.LocalPlayer.CustomColor.Value == Color3.fromRGB(111, 239, 91) then
 						Assigned = true
-						game:GetService'Players':Chat(("cone_green"))
+						game:GetService'Players':Chat(("cone_gnarp"))
 					end
 					if game.Players.LocalPlayer.CustomColor.Value == Color3.fromRGB(97, 194, 255) then
 						Assigned = true
@@ -816,8 +833,6 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 					if Assigned == false then
 						warn("Could not assign custom color!")
 					end
-                    wait()
-                    JoinDebounce = false
 				end
 				end
 		elseif msg == "cone_tophat_request" then
@@ -1407,14 +1422,13 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 					color5.Parent = rod
 					local ProximityPrompt = Instance.new("ProximityPrompt",color5)
 					ProximityPrompt.HoldDuration = 2
-					ProximityPrompt.ActionText = "Suck Dick [UNFINISHED]"
+					ProximityPrompt.ActionText = "Suck Dick [BETA]"
 					ProximityPrompt.RequiresLineOfSight = false
 					ProximityPrompt.ObjectText = "Suck"
-                    if plr == game.Players.LocalPlayer then
-                        ProximityPrompt.Enabled = false
-                    end
 					ProximityPrompt.Triggered:Connect(function(plr)
-						print(""..plr.Name.." Triggered")
+						if plr == game.Players.LocalPlayer then
+							game:GetService'Players':Chat(("cone_yae|"..model1.Parent.Name))
+						end
 					end)
 					local MeshReplacement = Instance.new("SpecialMesh")
 					MeshReplacement.Parent = color5
@@ -1439,6 +1453,7 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 					local modules = {}
 	
 					--// Scripts
+	
 					-- Script
 					task.spawn(function()
 						local script = script
@@ -1580,6 +1595,138 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 		elseif msg == "cone_yo" then
 			plr.Character.Shirt.Parent = game:GetService("CoreGui")
 			plr.Character.Pants.Parent = game:GetService("CoreGui")
+		elseif tostring(msg):split("|")[1] == "cone_yae" then
+			local NewPlr = game.Players:WaitForChild(""..tostring(msg):split("|")[2],30)
+			if NewPlr == plr then
+				
+			else
+			--CONVERTED WITH CONE--
+			local A1 = Instance.new("Attachment",NewPlr.Character:WaitForChild("HumanoidRootPart",30))
+			local A2 = Instance.new("Attachment",NewPlr.Character:WaitForChild("HumanoidRootPart",30))
+			A1.Name = "A1"
+			A2.Name = "A2"
+			
+			A1.CFrame = CFrame.new(0, -2.28000498, -4.00000191, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+			A2.CFrame = CFrame.new(0, -2.27999997, -2.5, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+				--CONVERTED WITH CONE--
+				plr.Character:WaitForChild("HumanoidRootPart",30).Anchored = true
+				NewPlr.Character:WaitForChild("HumanoidRootPart",30).Anchored = true
+				plr.Character:WaitForChild("HumanoidRootPart",30).CFrame = A1.WorldCFrame
+				for i = 1,math.random(25,30) do
+					game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.5,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A2.WorldCFrame}):Play()
+					task.wait(0.7)
+					game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.5,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A1.WorldCFrame}):Play()
+					task.wait(0.6)
+				end
+				
+				for i = 1,math.random(25,30) do
+					game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.3,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A2.WorldCFrame}):Play()
+					task.wait(0.5)
+					game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.3,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A1.WorldCFrame}):Play()
+					task.wait(0.3)
+				end
+				
+				game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.3,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A2.WorldCFrame}):Play()
+				task.wait(3)
+				game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.3,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A1.WorldCFrame}):Play()
+				local script = NewPlr.Character:WaitForChild("Model1").Model.Rod.Script
+				task.spawn(function()
+					for i = 1,40 do
+						script.Parent.MDRod4.WeldSpecial.C0 = CFrame.new(0, -0.0649999976, 0, 1, 0, 0, 0, 0.98480773, -0.173648193, 0, 0.173648193, 0.98480773)
+						--local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						--local ColorCorrection = Instance.new("ColorCorrectionEffect")
+						if NewPlr == game.Players.LocalPlayer then
+							--ColorCorrection.Parent = game.Lighting
+							--game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+							--ColorCorrection.Brightness = 0.06
+						end
+						wait()
+						game:GetService("TweenService"):Create(script.Parent.MDRod4.WeldSpecial, TweenInfo.new(0.65), {C0 = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)}):Play()
+						if NewPlr == game.Players.LocalPlayer then
+							--game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+							--game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+						end
+						task.wait(0.85)
+					end
+				end)
+				local ColorCorrection = Instance.new("ColorCorrectionEffect")
+				ColorCorrection.Parent = game.Lighting
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				task.wait(0.85)
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				task.wait(0.85)
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				task.wait(0.85)
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				task.wait(0.85)
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				task.wait(0.85)
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				
+				task.wait(0.3)
+				plr.Character:WaitForChild("HumanoidRootPart",30).Anchored = false
+				NewPlr.Character:WaitForChild("HumanoidRootPart",30).Anchored = false
+			end
 		end
 	end
 	
@@ -1602,7 +1749,7 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 	task.spawn(function()
 		while task.wait(1) do
 			local VersionNumber = game:HttpGet('https://pastebin.com/raw/405jcNjy')
-			if "1.0.3" == VersionNumber then
+			if "1.0.4" == VersionNumber then
 				
 			else
 				script.Parent.Parent.Parent.Outdated.Visible = true
@@ -1611,8 +1758,8 @@ local function ZHBJOC_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZHBJOC_fake_script)()
-local function MFRS_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(SODKYAM_fake_script)()
+local function YZOJ_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1624,8 +1771,8 @@ local function MFRS_fake_script() -- TextButton.LocalScript
 		})
 	end)
 end
-coroutine.wrap(MFRS_fake_script)()
-local function VHWO_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(YZOJ_fake_script)()
+local function NSZWR_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1637,8 +1784,8 @@ local function VHWO_fake_script() -- TextButton_2.LocalScript
 		})
 	end)
 end
-coroutine.wrap(VHWO_fake_script)()
-local function HLYQM_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(NSZWR_fake_script)()
+local function NFVIDYT_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1650,8 +1797,8 @@ local function HLYQM_fake_script() -- TextButton_3.LocalScript
 		})
 	end)
 end
-coroutine.wrap(HLYQM_fake_script)()
-local function QLUEI_fake_script() -- TextButton_4.LocalScript 
+coroutine.wrap(NFVIDYT_fake_script)()
+local function TEHAJPK_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1663,8 +1810,8 @@ local function QLUEI_fake_script() -- TextButton_4.LocalScript
 		})
 	end)
 end
-coroutine.wrap(QLUEI_fake_script)()
-local function WMSW_fake_script() -- TextButton_5.LocalScript 
+coroutine.wrap(TEHAJPK_fake_script)()
+local function FVZMXJ_fake_script() -- TextButton_5.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1676,8 +1823,8 @@ local function WMSW_fake_script() -- TextButton_5.LocalScript
 		})
 	end)
 end
-coroutine.wrap(WMSW_fake_script)()
-local function GBUNTP_fake_script() -- TextButton_6.LocalScript 
+coroutine.wrap(FVZMXJ_fake_script)()
+local function YEXUNNZ_fake_script() -- TextButton_6.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_6)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1689,8 +1836,8 @@ local function GBUNTP_fake_script() -- TextButton_6.LocalScript
 		})
 	end)
 end
-coroutine.wrap(GBUNTP_fake_script)()
-local function OWRGOBM_fake_script() -- TextButton_7.LocalScript 
+coroutine.wrap(YEXUNNZ_fake_script)()
+local function DSRNZ_fake_script() -- TextButton_7.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_7)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1702,12 +1849,12 @@ local function OWRGOBM_fake_script() -- TextButton_7.LocalScript
 		})
 	end)
 end
-coroutine.wrap(OWRGOBM_fake_script)()
-local function MNOEG_fake_script() -- TextButton_8.LocalScript 
+coroutine.wrap(DSRNZ_fake_script)()
+local function YIQTA_fake_script() -- TextButton_8.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_8)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		game:GetService'Players':Chat(("cone_orange"))
+		game:GetService'Players':Chat(("cone_orang"))
 		game:GetService("StarterGui"):SetCore("SendNotification", {
 			["Title"] = "Successful";
 			["Text"] = "Command Ran Successfully.";
@@ -1715,8 +1862,8 @@ local function MNOEG_fake_script() -- TextButton_8.LocalScript
 		})
 	end)
 end
-coroutine.wrap(MNOEG_fake_script)()
-local function RMKQWL_fake_script() -- TextButton_9.LocalScript 
+coroutine.wrap(YIQTA_fake_script)()
+local function XNCXJNI_fake_script() -- TextButton_9.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_9)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1728,12 +1875,12 @@ local function RMKQWL_fake_script() -- TextButton_9.LocalScript
 		})
 	end)
 end
-coroutine.wrap(RMKQWL_fake_script)()
-local function ROPKMT_fake_script() -- TextButton_10.LocalScript 
+coroutine.wrap(XNCXJNI_fake_script)()
+local function BFRXBGA_fake_script() -- TextButton_10.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_10)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		game:GetService'Players':Chat(("cone_green"))
+		game:GetService'Players':Chat(("cone_gnarp"))
 		game:GetService("StarterGui"):SetCore("SendNotification", {
 			["Title"] = "Successful";
 			["Text"] = "Command Ran Successfully.";
@@ -1741,8 +1888,8 @@ local function ROPKMT_fake_script() -- TextButton_10.LocalScript
 		})
 	end)
 end
-coroutine.wrap(ROPKMT_fake_script)()
-local function CCYVF_fake_script() -- TextButton_11.LocalScript 
+coroutine.wrap(BFRXBGA_fake_script)()
+local function RLIXQIL_fake_script() -- TextButton_11.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_11)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1754,93 +1901,53 @@ local function CCYVF_fake_script() -- TextButton_11.LocalScript
 		})
 	end)
 end
-coroutine.wrap(CCYVF_fake_script)()
-local function QAHIX_fake_script() -- TextButton_12.LocalScript 
+coroutine.wrap(RLIXQIL_fake_script)()
+local function VBCDGG_fake_script() -- TextButton_12.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_12)
 
 	local Enabled = false
+	local function RunCheck(plr)
+		local v = plr
+			if v.Character:FindFirstChild("Model1") and Enabled then
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
+			else
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
+			end
+	end
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		if Enabled == false then
 			Enabled = true
 			game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(235, 171, 107)}):Play()
 			for i,v in pairs(game.Players:GetPlayers()) do
-				if v.Character:FindFirstChild("Model1") and Enabled then
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
-				else
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
-				end
+				RunCheck(v)
 			end
 		else
 			Enabled = false
 			game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(134, 97, 61)}):Play()
 			for i,v in pairs(game.Players:GetPlayers()) do
-				if v.Character:FindFirstChild("Model1") and Enabled then
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
-				else
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
-					v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
-				end
+				RunCheck(v)
 			end
 			end
 	end)
 	
-	for i,v in pairs(game.Players:GetPlayers()) do
-		if v.Character:FindFirstChild("Model1") and Enabled then
-			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
-			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
-			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
-			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
-		else
-			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
-			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
-			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
-			v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
-		end
-		
-		v.Character.ChildAdded:Connect(function()
-			if v.Character:FindFirstChild("Model1") and Enabled then
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
-			else
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
-			end
-		end)
-	end
-	
-	game.Players.PlayerAdded:Connect(function(v)
-		v.Character.ChildAdded:Connect(function()
-			if v.Character:FindFirstChild("Model1") and Enabled then
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
-			else
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
-				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
+	game.Players.PlayerAdded:Connect(function(plr)
+		plr.Character.ChildAdded:Connect(function(ins)
+			RunCheck(plr)
+			if ins.Name == "Model1" then
+				RunCheck(plr)
 			end
 		end)
 	end)
 end
-coroutine.wrap(QAHIX_fake_script)()
-local function GMDBKAM_fake_script() -- MainCosmetics_2.Script 
+coroutine.wrap(VBCDGG_fake_script)()
+local function UAMUPBU_fake_script() -- MainCosmetics_2.Script 
 	local script = Instance.new('Script', MainCosmetics_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1862,8 +1969,8 @@ local function GMDBKAM_fake_script() -- MainCosmetics_2.Script
 		end
 	end)
 end
-coroutine.wrap(GMDBKAM_fake_script)()
-local function TXEMQ_fake_script() -- NSFW_2.Script 
+coroutine.wrap(UAMUPBU_fake_script)()
+local function RCCWV_fake_script() -- NSFW_2.Script 
 	local script = Instance.new('Script', NSFW_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1885,8 +1992,8 @@ local function TXEMQ_fake_script() -- NSFW_2.Script
 		end
 	end)
 end
-coroutine.wrap(TXEMQ_fake_script)()
-local function ONQBY_fake_script() -- Settings_2.Script 
+coroutine.wrap(RCCWV_fake_script)()
+local function IHODTAK_fake_script() -- Settings_2.Script 
 	local script = Instance.new('Script', Settings_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1908,12 +2015,12 @@ local function ONQBY_fake_script() -- Settings_2.Script
 		end
 	end)
 end
-coroutine.wrap(ONQBY_fake_script)()
-local function CMJGHL_fake_script() -- TextButton_13.LocalScript 
+coroutine.wrap(IHODTAK_fake_script)()
+local function IQEBC_fake_script() -- TextButton_13.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_13)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(CMJGHL_fake_script)()
+coroutine.wrap(IQEBC_fake_script)()
