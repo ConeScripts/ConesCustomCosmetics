@@ -1606,8 +1606,8 @@ local function SODKYAM_fake_script() -- Frame.LocalScript
 			A1.Name = "A1"
 			A2.Name = "A2"
 			
-			A1.CFrame = CFrame.new(0, -2.28000498, -4.00000191, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-			A2.CFrame = CFrame.new(0, -2.27999997, -2.5, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+			A1.CFrame = CFrame.new(0, -2.28000498, -4.00000191, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1)
+			A2.CFrame = CFrame.new(0, -2.27999997, -2.5, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1)
 				--CONVERTED WITH CONE--
 				plr.Character:WaitForChild("HumanoidRootPart",30).Anchored = true
 				NewPlr.Character:WaitForChild("HumanoidRootPart",30).Anchored = true
