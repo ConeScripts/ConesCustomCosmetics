@@ -1,0 +1,2026 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ConesFEGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local Frame = Instance.new("ScrollingFrame")
+local UICorner_2 = Instance.new("UICorner")
+local ClippingFix = Instance.new("Frame")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local Pages = Instance.new("Frame")
+local NSFW = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local TextButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local TextButton_3 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local TextButton_4 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+local TextButton_5 = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+local TextButton_6 = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+local TextButton_7 = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
+local TextButton_8 = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
+local TextButton_9 = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+local TextButton_10 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+local MainCosmetics = Instance.new("Frame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local TextButton_11 = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
+local Settings = Instance.new("Frame")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local TextButton_12 = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
+local UIScale = Instance.new("UIScale")
+local MenuSelector = Instance.new("Frame")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local UICorner_15 = Instance.new("UICorner")
+local UIListLayout_4 = Instance.new("UIListLayout")
+local MainCosmetics_2 = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local NSFW_2 = Instance.new("TextButton")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local Settings_2 = Instance.new("TextButton")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local Outdated = Instance.new("Frame")
+local Main_2 = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local Frame_2 = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local ClippingFix_2 = Instance.new("Frame")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local TextButton_13 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint")
+local TextLabel_3 = Instance.new("TextLabel")
+local UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
+local TextLabel_4 = Instance.new("TextLabel")
+local UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+ConesFEGui.Name = "Cones FE Gui"
+ConesFEGui.Parent = game.Players.LocalPlayer.PlayerGui
+ConesFEGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ConesFEGui.DisplayOrder = 2147483647
+ConesFEGui.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = ConesFEGui
+Main.AnchorPoint = Vector2.new(0.5, 1)
+Main.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.5, 0, 0.400000006, 0)
+Main.Size = UDim2.new(0.383795828, 0, 0.0470348187, 0)
+Main.ZIndex = 5
+
+UICorner.CornerRadius = UDim.new(0, 3)
+UICorner.Parent = Main
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 11.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(1, 0, 0.689655185, 0)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Cones Custom Cosmetics"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 18.000
+TextLabel.TextWrapped = true
+
+UIAspectRatioConstraint.Parent = TextLabel
+UIAspectRatioConstraint.AspectRatio = 24.050
+
+UITextSizeConstraint.Parent = TextLabel
+UITextSizeConstraint.MaxTextSize = 18
+
+UIAspectRatioConstraint_2.Parent = Main
+UIAspectRatioConstraint_2.AspectRatio = 16.586
+
+Frame.Name = "Frame"
+Frame.Parent = Main
+Frame.BackgroundColor3 = Color3.fromRGB(30, 23, 12)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0, 0, 0.689654946, 0)
+Frame.Selectable = false
+Frame.Size = UDim2.new(0.999999881, 0, 10.3265419, 0)
+Frame.ZIndex = 0
+Frame.CanvasSize = UDim2.new(0, 0, 0, 1)
+
+UICorner_2.CornerRadius = UDim.new(0, 6)
+UICorner_2.Parent = Frame
+
+ClippingFix.Name = "ClippingFix"
+ClippingFix.Parent = Frame
+ClippingFix.BackgroundColor3 = Color3.fromRGB(30, 23, 12)
+ClippingFix.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ClippingFix.BorderSizePixel = 0
+ClippingFix.Size = UDim2.new(1, 0, 0.0120000001, 0)
+ClippingFix.ZIndex = 0
+
+UIAspectRatioConstraint_3.Parent = Frame
+UIAspectRatioConstraint_3.AspectRatio = 1.865
+
+Pages.Name = "Pages"
+Pages.Parent = Frame
+Pages.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pages.BackgroundTransparency = 11.000
+Pages.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Pages.BorderSizePixel = 0
+Pages.Size = UDim2.new(1, 0, 1, 0)
+
+NSFW.Name = "NSFW"
+NSFW.Parent = Pages
+NSFW.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NSFW.BackgroundTransparency = 11.000
+NSFW.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NSFW.BorderSizePixel = 0
+NSFW.Position = UDim2.new(0, 0, 0.0348875262, 0)
+NSFW.Size = UDim2.new(1, 0, 0.965112627, 0)
+NSFW.Visible = false
+
+UIListLayout.Parent = NSFW
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 12)
+
+TextButton.Parent = NSFW
+TextButton.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "Cum [Dick]"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 18.000
+TextButton.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 3)
+UICorner_3.Parent = TextButton
+
+UITextSizeConstraint_2.Parent = TextButton
+UITextSizeConstraint_2.MaxTextSize = 18
+
+TextButton_2.Parent = NSFW
+TextButton_2.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_2.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_2.Font = Enum.Font.SourceSansBold
+TextButton_2.Text = "Remove Shirt And Pants [Dick]"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 18.000
+TextButton_2.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 3)
+UICorner_4.Parent = TextButton_2
+
+UITextSizeConstraint_3.Parent = TextButton_2
+UITextSizeConstraint_3.MaxTextSize = 18
+
+TextButton_3.Parent = NSFW
+TextButton_3.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_3.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_3.Font = Enum.Font.SourceSansBold
+TextButton_3.Text = "Wear Dick"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 18.000
+TextButton_3.TextWrapped = true
+
+UICorner_5.CornerRadius = UDim.new(0, 3)
+UICorner_5.Parent = TextButton_3
+
+UITextSizeConstraint_4.Parent = TextButton_3
+UITextSizeConstraint_4.MaxTextSize = 18
+
+TextButton_4.Parent = NSFW
+TextButton_4.BackgroundColor3 = Color3.fromRGB(235, 99, 99)
+TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_4.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_4.Visible = false
+TextButton_4.Font = Enum.Font.SourceSansBold
+TextButton_4.Text = "Owner Tag"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 18.000
+TextButton_4.TextWrapped = true
+
+UICorner_6.CornerRadius = UDim.new(0, 3)
+UICorner_6.Parent = TextButton_4
+
+UITextSizeConstraint_5.Parent = TextButton_4
+UITextSizeConstraint_5.MaxTextSize = 18
+
+TextButton_5.Parent = NSFW
+TextButton_5.BackgroundColor3 = Color3.fromRGB(235, 99, 99)
+TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.BorderSizePixel = 0
+TextButton_5.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_5.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_5.Visible = false
+TextButton_5.Font = Enum.Font.SourceSansBold
+TextButton_5.Text = "D3Von Tag"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 18.000
+TextButton_5.TextWrapped = true
+
+UICorner_7.CornerRadius = UDim.new(0, 3)
+UICorner_7.Parent = TextButton_5
+
+UITextSizeConstraint_6.Parent = TextButton_5
+UITextSizeConstraint_6.MaxTextSize = 18
+
+TextButton_6.Parent = NSFW
+TextButton_6.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.BorderSizePixel = 0
+TextButton_6.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_6.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_6.Font = Enum.Font.SourceSansBold
+TextButton_6.Text = "Dick Color Normal"
+TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 18.000
+TextButton_6.TextWrapped = true
+
+UICorner_8.CornerRadius = UDim.new(0, 3)
+UICorner_8.Parent = TextButton_6
+
+UITextSizeConstraint_7.Parent = TextButton_6
+UITextSizeConstraint_7.MaxTextSize = 18
+
+TextButton_7.Parent = NSFW
+TextButton_7.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.BorderSizePixel = 0
+TextButton_7.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_7.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_7.Font = Enum.Font.SourceSansBold
+TextButton_7.Text = "Dick Color Blue"
+TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.TextScaled = true
+TextButton_7.TextSize = 18.000
+TextButton_7.TextWrapped = true
+
+UICorner_9.CornerRadius = UDim.new(0, 3)
+UICorner_9.Parent = TextButton_7
+
+UITextSizeConstraint_8.Parent = TextButton_7
+UITextSizeConstraint_8.MaxTextSize = 18
+
+TextButton_8.Parent = NSFW
+TextButton_8.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_8.BorderSizePixel = 0
+TextButton_8.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_8.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_8.Font = Enum.Font.SourceSansBold
+TextButton_8.Text = "Dick Color Orange"
+TextButton_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_8.TextScaled = true
+TextButton_8.TextSize = 18.000
+TextButton_8.TextWrapped = true
+
+UICorner_10.CornerRadius = UDim.new(0, 3)
+UICorner_10.Parent = TextButton_8
+
+UITextSizeConstraint_9.Parent = TextButton_8
+UITextSizeConstraint_9.MaxTextSize = 18
+
+TextButton_9.Parent = NSFW
+TextButton_9.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_9.BorderSizePixel = 0
+TextButton_9.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_9.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_9.Font = Enum.Font.SourceSansBold
+TextButton_9.Text = "Dick Color Yellow"
+TextButton_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_9.TextScaled = true
+TextButton_9.TextSize = 18.000
+TextButton_9.TextWrapped = true
+
+UICorner_11.CornerRadius = UDim.new(0, 3)
+UICorner_11.Parent = TextButton_9
+
+UITextSizeConstraint_10.Parent = TextButton_9
+UITextSizeConstraint_10.MaxTextSize = 18
+
+TextButton_10.Parent = NSFW
+TextButton_10.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_10.BorderSizePixel = 0
+TextButton_10.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_10.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_10.Font = Enum.Font.SourceSansBold
+TextButton_10.Text = "Dick Color Green"
+TextButton_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_10.TextScaled = true
+TextButton_10.TextSize = 18.000
+TextButton_10.TextWrapped = true
+
+UICorner_12.CornerRadius = UDim.new(0, 3)
+UICorner_12.Parent = TextButton_10
+
+UITextSizeConstraint_11.Parent = TextButton_10
+UITextSizeConstraint_11.MaxTextSize = 18
+
+MainCosmetics.Name = "MainCosmetics"
+MainCosmetics.Parent = Pages
+MainCosmetics.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainCosmetics.BackgroundTransparency = 11.000
+MainCosmetics.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainCosmetics.BorderSizePixel = 0
+MainCosmetics.Position = UDim2.new(0, 0, 0.0348875262, 0)
+MainCosmetics.Size = UDim2.new(1, 0, 0.965112627, 0)
+
+UIListLayout_2.Parent = MainCosmetics
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 12)
+
+TextButton_11.Parent = MainCosmetics
+TextButton_11.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_11.BorderSizePixel = 0
+TextButton_11.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_11.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_11.Font = Enum.Font.SourceSansBold
+TextButton_11.Text = "Wear Dominus"
+TextButton_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_11.TextScaled = true
+TextButton_11.TextSize = 18.000
+TextButton_11.TextWrapped = true
+
+UICorner_13.CornerRadius = UDim.new(0, 3)
+UICorner_13.Parent = TextButton_11
+
+UITextSizeConstraint_12.Parent = TextButton_11
+UITextSizeConstraint_12.MaxTextSize = 18
+
+Settings.Name = "Settings"
+Settings.Parent = Pages
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 11.000
+Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0, 0, 0.0348875262, 0)
+Settings.Size = UDim2.new(1, 0, 0.965112627, 0)
+Settings.Visible = false
+
+UIListLayout_3.Parent = Settings
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0, 12)
+
+TextButton_12.Parent = Settings
+TextButton_12.BackgroundColor3 = Color3.fromRGB(134, 97, 61)
+TextButton_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_12.BorderSizePixel = 0
+TextButton_12.Position = UDim2.new(0, 0, 0.0542692281, 0)
+TextButton_12.Size = UDim2.new(1, 0, 0.0700000003, 0)
+TextButton_12.Font = Enum.Font.SourceSansBold
+TextButton_12.Text = "Hide NSFW [BETA]"
+TextButton_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_12.TextScaled = true
+TextButton_12.TextSize = 18.000
+TextButton_12.TextWrapped = true
+
+UICorner_14.CornerRadius = UDim.new(0, 3)
+UICorner_14.Parent = TextButton_12
+
+UITextSizeConstraint_13.Parent = TextButton_12
+UITextSizeConstraint_13.MaxTextSize = 18
+
+UIScale.Parent = Main
+UIScale.Scale = 0.750
+
+MenuSelector.Name = "MenuSelector"
+MenuSelector.Parent = Main
+MenuSelector.AnchorPoint = Vector2.new(1, 0.5)
+MenuSelector.BackgroundColor3 = Color3.fromRGB(40, 30, 16)
+MenuSelector.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MenuSelector.BorderSizePixel = 0
+MenuSelector.Position = UDim2.new(0, 0, 4.7926383, 0)
+MenuSelector.Size = UDim2.new(0.176827699, 0, 9.5852766, 0)
+
+UIAspectRatioConstraint_4.Parent = MenuSelector
+UIAspectRatioConstraint_4.AspectRatio = 0.305
+
+UICorner_15.CornerRadius = UDim.new(0, 3)
+UICorner_15.Parent = MenuSelector
+
+UIListLayout_4.Parent = MenuSelector
+UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_4.Padding = UDim.new(0, 3)
+
+MainCosmetics_2.Name = "MainCosmetics"
+MainCosmetics_2.Parent = MenuSelector
+MainCosmetics_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainCosmetics_2.BackgroundTransparency = 1.000
+MainCosmetics_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainCosmetics_2.BorderSizePixel = 0
+MainCosmetics_2.Size = UDim2.new(0.708333611, 0, 0.0900000036, 0)
+MainCosmetics_2.Font = Enum.Font.SourceSansBold
+MainCosmetics_2.Text = "Home"
+MainCosmetics_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainCosmetics_2.TextSize = 17.000
+
+ImageLabel.Parent = MainCosmetics_2
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 11.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.862745106, 0, 0, 0)
+ImageLabel.Size = UDim2.new(0.411764741, 0, 1, 0)
+ImageLabel.Image = "rbxassetid://6034798461"
+
+NSFW_2.Name = "NSFW"
+NSFW_2.Parent = MenuSelector
+NSFW_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NSFW_2.BackgroundTransparency = 1.000
+NSFW_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NSFW_2.BorderSizePixel = 0
+NSFW_2.Size = UDim2.new(0.708333611, 0, 0.0900000036, 0)
+NSFW_2.Font = Enum.Font.SourceSansBold
+NSFW_2.Text = "NSFW"
+NSFW_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+NSFW_2.TextSize = 17.000
+NSFW_2.TextTransparency = 0.500
+
+ImageLabel_2.Parent = NSFW_2
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 11.000
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(0.890999973, 0, 0.100000001, 0)
+ImageLabel_2.Size = UDim2.new(0.344999999, 0, 0.829999983, 0)
+ImageLabel_2.Image = "rbxassetid://14563958666"
+
+Settings_2.Name = "Settings"
+Settings_2.Parent = MenuSelector
+Settings_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings_2.BackgroundTransparency = 1.000
+Settings_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings_2.BorderSizePixel = 0
+Settings_2.Size = UDim2.new(0.708333611, 0, 0.0900000036, 0)
+Settings_2.Font = Enum.Font.SourceSansBold
+Settings_2.Text = "Settings"
+Settings_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Settings_2.TextSize = 17.000
+Settings_2.TextTransparency = 0.500
+
+ImageLabel_3.Parent = Settings_2
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_3.BackgroundTransparency = 11.000
+ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_3.BorderSizePixel = 0
+ImageLabel_3.Position = UDim2.new(0.98039192, 0, 0, 0)
+ImageLabel_3.Size = UDim2.new(0.411764741, 0, 1, 0)
+ImageLabel_3.Image = "rbxassetid://7059346373"
+
+Outdated.Name = "Outdated"
+Outdated.Parent = ConesFEGui
+Outdated.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Outdated.BackgroundTransparency = 0.550
+Outdated.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Outdated.BorderSizePixel = 0
+Outdated.Size = UDim2.new(1, 0, 1, 0)
+Outdated.Visible = false
+Outdated.ZIndex = 6
+
+Main_2.Name = "Main"
+Main_2.Parent = Outdated
+Main_2.AnchorPoint = Vector2.new(0.5, 1)
+Main_2.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+Main_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main_2.BorderSizePixel = 0
+Main_2.Position = UDim2.new(0.5, 0, 0.400000006, 0)
+Main_2.Size = UDim2.new(0.200000003, 0, 0.0500000007, 0)
+Main_2.ZIndex = 5
+
+UICorner_16.CornerRadius = UDim.new(0, 3)
+UICorner_16.Parent = Main_2
+
+TextLabel_2.Parent = Main_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 11.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Size = UDim2.new(1, 0, 0.689655185, 0)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "Outdated"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 18.000
+TextLabel_2.TextWrapped = true
+
+UIAspectRatioConstraint_5.Parent = TextLabel_2
+UIAspectRatioConstraint_5.AspectRatio = 24.050
+
+UITextSizeConstraint_14.Parent = TextLabel_2
+UITextSizeConstraint_14.MaxTextSize = 18
+
+UIAspectRatioConstraint_6.Parent = Main_2
+UIAspectRatioConstraint_6.AspectRatio = 16.586
+
+Frame_2.Parent = Main_2
+Frame_2.BackgroundColor3 = Color3.fromRGB(30, 23, 12)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.ClipsDescendants = true
+Frame_2.Position = UDim2.new(0, 0, 0.689655185, 0)
+Frame_2.Size = UDim2.new(1, 0, 8.89562321, 0)
+Frame_2.ZIndex = 0
+
+UICorner_17.CornerRadius = UDim.new(0, 6)
+UICorner_17.Parent = Frame_2
+
+ClippingFix_2.Name = "ClippingFix"
+ClippingFix_2.Parent = Frame_2
+ClippingFix_2.BackgroundColor3 = Color3.fromRGB(30, 23, 12)
+ClippingFix_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ClippingFix_2.BorderSizePixel = 0
+ClippingFix_2.Size = UDim2.new(1, 0, 0.0120000001, 0)
+ClippingFix_2.ZIndex = 0
+
+UIAspectRatioConstraint_7.Parent = Frame_2
+UIAspectRatioConstraint_7.AspectRatio = 1.865
+
+TextButton_13.Parent = Frame_2
+TextButton_13.BackgroundColor3 = Color3.fromRGB(235, 171, 107)
+TextButton_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_13.BorderSizePixel = 0
+TextButton_13.Position = UDim2.new(0.0675168782, 0, 0.837570071, 0)
+TextButton_13.Size = UDim2.new(0.861215115, 0, 0.112414829, 0)
+TextButton_13.Font = Enum.Font.SourceSansBold
+TextButton_13.Text = "Okay"
+TextButton_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_13.TextScaled = true
+TextButton_13.TextSize = 18.000
+TextButton_13.TextWrapped = true
+
+UICorner_18.CornerRadius = UDim.new(0, 3)
+UICorner_18.Parent = TextButton_13
+
+UIAspectRatioConstraint_8.Parent = TextButton_13
+UIAspectRatioConstraint_8.AspectRatio = 16.586
+
+UITextSizeConstraint_15.Parent = TextButton_13
+UITextSizeConstraint_15.MaxTextSize = 18
+
+TextLabel_3.Parent = Frame_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 11.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0, 0, 0.0279750284, 0)
+TextLabel_3.Size = UDim2.new(0.999999881, 0, 0.21040906, 0)
+TextLabel_3.Font = Enum.Font.SourceSansBold
+TextLabel_3.Text = "Outdated Client"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 18.000
+TextLabel_3.TextWrapped = true
+
+UITextSizeConstraint_16.Parent = TextLabel_3
+UITextSizeConstraint_16.MaxTextSize = 18
+
+TextLabel_4.Parent = Frame_2
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 11.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0, 0, 0.237787738, 0)
+TextLabel_4.Size = UDim2.new(0.999999881, 0, 0.399240494, 0)
+TextLabel_4.Font = Enum.Font.SourceSansBold
+TextLabel_4.Text = "This script is now outdated. Please rejoin and reload the script. Failure to comply will result in; Invisible Items, Unsupported Models And More."
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 18.000
+TextLabel_4.TextWrapped = true
+
+UITextSizeConstraint_17.Parent = TextLabel_4
+UITextSizeConstraint_17.MaxTextSize = 18
+
+-- Scripts:
+
+local function MMKGY_fake_script() -- Main.Smooth GUI Dragging 
+	local script = Instance.new('LocalScript', Main)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (15); -- // The speed of the UI darg.
+	local function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+end
+coroutine.wrap(MMKGY_fake_script)()
+local function SODKYAM_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	script.Parent.CanvasSize = UDim2.new(0,0,1,0)
+	
+	local function CommandCheck(msg,plr)
+		local DColor = Color3.fromRGB(239, 97, 97)
+		if plr:FindFirstChild("CustomColor") then
+			--DColor = Color3.fromRGB(plr.CustomColor.Value.X * 255, plr.CustomColor.Value.Y * 255, plr.CustomColor.Value.Z * 255)
+		end
+		
+		--DCOLORS--
+		if msg == "cone_normal" then
+			if plr:FindFirstChild("CustomColor") then
+				plr.CustomColor.Value = Color3.fromRGB(239, 97, 97)
+			else
+				local CustomColor = Instance.new("Color3Value",plr)
+				CustomColor.Name = "CustomColor"
+				CustomColor = Color3.fromRGB(239, 97, 97)
+			end
+		end
+		
+		if msg == "cone_orang" then
+			if plr:FindFirstChild("CustomColor") then
+				plr.CustomColor.Value = Color3.fromRGB(255, 130, 67)
+			else
+				local CustomColor = Instance.new("Color3Value",plr)
+				CustomColor.Name = "CustomColor"
+				CustomColor = Color3.fromRGB(255, 130, 67)
+			end
+		end
+		
+		if msg == "cone_yellow" then
+			if plr:FindFirstChild("CustomColor") then
+				plr.CustomColor.Value = Color3.fromRGB(239, 207, 91)
+			else
+				local CustomColor = Instance.new("Color3Value",plr)
+				CustomColor.Name = "CustomColor"
+				CustomColor = Color3.fromRGB(239, 207, 91)
+			end
+		end
+		
+		if msg == "cone_gnarp" then
+			if plr:FindFirstChild("CustomColor") then
+				plr.CustomColor.Value = Color3.fromRGB(111, 239, 91)
+			else
+				local CustomColor = Instance.new("Color3Value",plr)
+				CustomColor.Name = "CustomColor"
+				CustomColor = Color3.fromRGB(111, 239, 91)
+			end
+		end
+		
+		if msg == "cone_blue" then
+			if plr:FindFirstChild("CustomColor") then
+				plr.CustomColor.Value = Color3.fromRGB(97, 194, 255)
+			else
+				local CustomColor = Instance.new("Color3Value",plr)
+				CustomColor.Name = "CustomColor"
+				CustomColor = Color3.fromRGB(97, 194, 255)
+			end
+		end
+		
+		if msg == "cone_normal" then
+			if plr:FindFirstChild("CustomColor") then
+				plr.CustomColor.Value = Color3.fromRGB(239, 97, 97)
+			else
+				local CustomColor = Instance.new("Color3Value",plr)
+				CustomColor.Name = "CustomColor"
+				CustomColor = Color3.fromRGB(239, 97, 97)
+			end
+		end
+		if msg == "cone_normal" then
+			if plr:FindFirstChild("CustomColor") then
+				plr.CustomColor.Value = Color3.fromRGB(239, 97, 97)
+			else
+				local CustomColor = Instance.new("Color3Value",plr)
+				CustomColor.Name = "CustomColor"
+				CustomColor = Color3.fromRGB(239, 97, 97)
+			end
+		end
+		
+		--DCOLORS--
+		if msg == "cone_user_join" then
+			if plr == game.Players.LocalPlayer then
+				
+				else
+			game:GetService("StarterGui"):SetCore("SendNotification", {
+				["Title"] = "Player Joined";
+				["Text"] = "Player Detected Using Script! "..plr.Name;
+			})
+			if game.Players.LocalPlayer.Character:FindFirstChild("Model1") then
+				game:GetService'Players':Chat(("cone_what"))
+			end
+			if game.Players.LocalPlayer.Character:FindFirstChild("WhiteTopHat") then
+				--game:GetService'Players':Chat(("cone_tophat_req"))
+				end
+				if game.Players.LocalPlayer.Character:FindFirstChild("Shirt") then
+					--game:GetService'Players':Chat(("cone_tophat_req"))
+				else
+					game:GetService'Players':Chat(("cone_yo"))
+				end
+			if game.Players.LocalPlayer.Character:FindFirstChild("DominusAureusAccessory") then
+				game:GetService'Players':Chat(("cone_dominus"))
+				end
+				
+				if game.Players.LocalPlayer:FindFirstChild("CustomColor") then
+					local Assigned = false
+					if game.Players.LocalPlayer.CustomColor.Value == Color3.fromRGB(255, 130, 67) then
+						Assigned = true
+						game:GetService'Players':Chat(("cone_orang"))
+					end
+					if game.Players.LocalPlayer.CustomColor.Value == Color3.fromRGB(239, 207, 91) then
+						Assigned = true
+						game:GetService'Players':Chat(("cone_yellow"))
+					end
+					if game.Players.LocalPlayer.CustomColor.Value == Color3.fromRGB(111, 239, 91) then
+						Assigned = true
+						game:GetService'Players':Chat(("cone_gnarp"))
+					end
+					if game.Players.LocalPlayer.CustomColor.Value == Color3.fromRGB(97, 194, 255) then
+						Assigned = true
+						game:GetService'Players':Chat(("cone_blue"))
+					end
+					
+					if Assigned == false then
+						warn("Could not assign custom color!")
+					end
+				end
+				end
+		elseif msg == "cone_tophat_request" then
+	
+			if plr.Character:FindFirstChild("WhiteTopHat") then
+	
+			else
+				local WhiteTopHat = Instance.new("Hat") 
+				local Handle = Instance.new("Part") 
+				local Mesh = Instance.new("SpecialMesh") 
+				local Decal = Instance.new("Decal") 
+				WhiteTopHat.Archivable = true 
+				WhiteTopHat.AttachmentForward = Vector3.new(-0, -0, -1) 
+				WhiteTopHat.AttachmentPoint = CFrame.new(0, -0.25, 0)*CFrame.Angles(-0, -0, -1) 
+				WhiteTopHat.AttachmentPos = Vector3.new(0, -0.25, 0) 
+				WhiteTopHat.AttachmentRight = Vector3.new(1, 0, 0) 
+				WhiteTopHat.AttachmentUp = Vector3.new(0, 1, 0) 
+				WhiteTopHat.Name = "WhiteTopHat" 
+				WhiteTopHat.Parent = plr.Character
+				Handle.Anchored = false 
+				Handle.Archivable = true 
+				Handle.BackParamA = -0.5 
+				Handle.BackParamB = 0.5 
+				Handle.BackSurface = Enum.SurfaceType.Smooth 
+				Handle.BackSurfaceInput = Enum.InputType.NoInput 
+				Handle.BottomParamA = -0.5 
+				Handle.BottomParamB = 0.5 
+				Handle.BottomSurface = Enum.SurfaceType.Smooth 
+				Handle.BottomSurfaceInput = Enum.InputType.NoInput 
+				Handle.BrickColor = BrickColor.new("Medium stone grey") 
+				Handle.CFrame = CFrame.new(-12.296911239624023, 6.567119598388672, 30.12342071533203)*CFrame.Angles(-0, -0, -1) 
+				Handle.CanCollide = false 
+				Handle.CollisionGroupId = "0" 
+				Handle.Color = Color3.new(0.639216, 0.635294, 0.647059) 
+				Handle.FrontParamA = -0.5 
+				Handle.FrontParamB = 0.5 
+				Handle.FrontSurface = Enum.SurfaceType.Smooth 
+				Handle.FrontSurfaceInput = Enum.InputType.NoInput 
+				Handle.LeftParamA = -0.5 
+				Handle.LeftParamB = 0.5 
+				Handle.LeftSurface = Enum.SurfaceType.Smooth 
+				Handle.LeftSurfaceInput = Enum.InputType.NoInput 
+				Handle.Locked = false 
+				Handle.Material = Enum.Material.Plastic 
+				Handle.Name = "Handle" 
+				Handle.Orientation = Vector3.new(0, 0, 0) 
+				Handle.Parent = WhiteTopHat 
+				Handle.Position = Vector3.new(-12.296911239624023, 6.567119598388672, 30.12342071533203) 
+				Handle.Reflectance = 0 
+				Handle.RightParamA = -0.5 
+				Handle.RightParamB = 0.5 
+				Handle.RightSurface = Enum.SurfaceType.Smooth 
+				Handle.RightSurfaceInput = Enum.InputType.NoInput 
+				Handle.RotVelocity = Vector3.new(0, 0, 0) 
+				Handle.Rotation = Vector3.new(0, 0, 0) 
+				Handle.Shape = Enum.PartType.Block 
+				Handle.Size = Vector3.new(2, 0.800000011920929, 2) 
+				Handle.TopParamA = -0.5 
+				Handle.TopParamB = 0.5 
+				Handle.TopSurface = Enum.SurfaceType.Smooth 
+				Handle.TopSurfaceInput = Enum.InputType.NoInput 
+				Handle.Transparency = 0 
+				Handle.Velocity = Vector3.new(0, 0, 0) 
+				Mesh.Archivable = true 
+				Mesh.MeshId = "http://www.roblox.com/asset/?id=1028713" 
+				Mesh.MeshType = Enum.MeshType.FileMesh 
+				Mesh.Name = "Mesh" 
+				Mesh.Offset = Vector3.new(0, 0, 0) 
+				Mesh.Parent = Handle 
+				Mesh.Scale = Vector3.new(1, 1, 1) 
+				Mesh.TextureId = "http://www.roblox.com/asset/?id=96905697" 
+				Mesh.VertexColor = Vector3.new(1, 1, 1) 
+				Decal.Archivable = true 
+				Decal.Color3 = Color3.new(1, 1, 1) 
+				Decal.Face = Enum.NormalId.Front 
+				Decal.Name = "Decal" 
+				Decal.Parent = Handle 
+				Decal.Texture = "http://www.roblox.com/asset/?id=110249574" 
+				Decal.Transparency = 0
+			end
+	
+		elseif msg == "cone_dominus" then
+			if plr.Character:FindFirstChild("DominusAureusAccessory") then
+	
+			else
+	
+				local DominusAureusAccessory = Instance.new("Accessory") 
+				local Handle = Instance.new("Part") 
+				local Mesh = Instance.new("SpecialMesh") 
+				local AvatarPartScaleType = Instance.new("StringValue") 
+				local HatAttachment = Instance.new("Attachment") 
+				local OriginalSize1 = Instance.new("Vector3Value") 
+				local OriginalSize = Instance.new("Vector3Value") 
+				local AccessoryWeld = Instance.new("Weld") 
+				DominusAureusAccessory.Archivable = true 
+				DominusAureusAccessory.AttachmentForward = Vector3.new(-3.029981271446139e-15, 4.1444258024012927e-16, -1) 
+				DominusAureusAccessory.AttachmentPoint = CFrame.new(0.04999876022338867, 0.6999998092651367, -0.10028076171875)*CFrame.Angles(-3.029981271446139e-15, 4.1444258024012927e-16, -1) 
+				DominusAureusAccessory.AttachmentPos = Vector3.new(0.04999876022338867, 0.6999998092651367, -0.10028076171875) 
+				DominusAureusAccessory.AttachmentRight = Vector3.new(1, -7.871375551360416e-09, -3.029981271446139e-15) 
+				DominusAureusAccessory.AttachmentUp = Vector3.new(7.871375551360416e-09, 1, 4.1444255377034967e-16) 
+				DominusAureusAccessory.Name = "DominusAureusAccessory" 
+				DominusAureusAccessory.Parent = plr.Character
+				Handle.Anchored = false 
+				Handle.Archivable = true 
+				Handle.BackParamA = -0.5 
+				Handle.BackParamB = 0.5 
+				Handle.BackSurface = Enum.SurfaceType.Smooth 
+				Handle.BackSurfaceInput = Enum.InputType.NoInput 
+				Handle.BottomParamA = -0.5 
+				Handle.BottomParamB = 0.5 
+				Handle.BottomSurface = Enum.SurfaceType.Smooth 
+				Handle.BottomSurfaceInput = Enum.InputType.NoInput 
+				Handle.BrickColor = BrickColor.new("Medium stone grey") 
+				Handle.CFrame = CFrame.new(-12.34691047668457, 5.7171196937561035, 30.22370147705078)*CFrame.Angles(3.029981271446139e-15, -4.1444255377034967e-16, -1) 
+				Handle.CanCollide = false 
+				Handle.CollisionGroupId = "0" 
+				Handle.Color = Color3.new(0.639216, 0.635294, 0.647059) 
+				Handle.FrontParamA = -0.5 
+				Handle.FrontParamB = 0.5 
+				Handle.FrontSurface = Enum.SurfaceType.Smooth 
+				Handle.FrontSurfaceInput = Enum.InputType.NoInput 
+				Handle.LeftParamA = -0.5 
+				Handle.LeftParamB = 0.5 
+				Handle.LeftSurface = Enum.SurfaceType.Smooth 
+				Handle.LeftSurfaceInput = Enum.InputType.NoInput 
+				Handle.Locked = true 
+				Handle.Material = Enum.Material.Plastic 
+				Handle.Name = "Handle" 
+				Handle.Orientation = Vector3.new(0, 0, 0) 
+				Handle.Parent = DominusAureusAccessory 
+				Handle.Position = Vector3.new(-12.34691047668457, 5.7171196937561035, 30.22370147705078) 
+				Handle.Reflectance = 0 
+				Handle.RightParamA = -0.5 
+				Handle.RightParamB = 0.5 
+				Handle.RightSurface = Enum.SurfaceType.Smooth 
+				Handle.RightSurfaceInput = Enum.InputType.NoInput 
+				Handle.RotVelocity = Vector3.new(0, 0, 0) 
+				Handle.Rotation = Vector3.new(0, 0, 0) 
+				Handle.Shape = Enum.PartType.Block 
+				Handle.Size = Vector3.new(2.0999977588653564, 2.6000001430511475, 2.000000238418579) 
+				Handle.TopParamA = -0.5 
+				Handle.TopParamB = 0.5 
+				Handle.TopSurface = Enum.SurfaceType.Smooth 
+				Handle.TopSurfaceInput = Enum.InputType.NoInput 
+				Handle.Transparency = 0 
+				Handle.Velocity = Vector3.new(0, 0, 0) 
+				Mesh.Archivable = true 
+				Mesh.MeshId = "http://www.roblox.com/asset/?id=138923368 " 
+				Mesh.MeshType = Enum.MeshType.FileMesh 
+				Mesh.Name = "Mesh" 
+				Mesh.Offset = Vector3.new(0, 0, 0) 
+				Mesh.Parent = Handle 
+				Mesh.Scale = Vector3.new(1.0450000762939453, 1.0450000762939453, 1.0450000762939453) 
+				Mesh.TextureId = "http://www.roblox.com/asset/?id=138923281" 
+				Mesh.VertexColor = Vector3.new(1, 1, 1) 
+				AvatarPartScaleType.Archivable = true 
+				AvatarPartScaleType.Name = "AvatarPartScaleType" 
+				AvatarPartScaleType.Parent = Handle 
+				AvatarPartScaleType.Value = "Classic" 
+				HatAttachment.Archivable = true 
+				HatAttachment.Axis = Vector3.new(1, -7.871375551360416e-09, -3.029981271446139e-15) 
+				HatAttachment.CFrame = CFrame.new(0.04999876394867897, 0.6999998092651367, -0.10028076171875)*CFrame.Angles(-3.029981271446139e-15, 4.1444258024012927e-16, -1) 
+				HatAttachment.Name = "HatAttachment" 
+				HatAttachment.Orientation = Vector3.new(2.374580973475357e-14, 1.7360513525875587e-13, -4.5099656631464313e-07) 
+				HatAttachment.Parent = Handle 
+				HatAttachment.Position = Vector3.new(0.04999876394867897, 0.6999998092651367, -0.10028076171875) 
+				HatAttachment.Rotation = Vector3.new(2.374580973475357e-14, 1.7360513525875587e-13, -4.5099656631464313e-07) 
+				HatAttachment.SecondaryAxis = Vector3.new(7.871375551360416e-09, 1, 4.1444255377034967e-16) 
+				HatAttachment.Visible = false 
+				OriginalSize1.Archivable = true 
+				OriginalSize1.Name = "OriginalSize1" 
+				OriginalSize1.Parent = Handle 
+				OriginalSize1.Value = Vector3.new(2.0999977588653564, 2.6000001430511475, 2.000000238418579) 
+				OriginalSize.Archivable = true 
+				OriginalSize.Name = "OriginalSize" 
+				OriginalSize.Parent = Handle 
+				OriginalSize.Value = Vector3.new(2.0999977588653564, 2.6000001430511475, 2.000000238418579) 
+				AccessoryWeld.Archivable = true 
+				AccessoryWeld.C0 = CFrame.new(0.04999876394867897, 0.6999998092651367, -0.10028076171875)*CFrame.Angles(-3.029981271446139e-15, 4.1444258024012927e-16, -1) 
+				AccessoryWeld.C1 = CFrame.new(0, 0.6000000238418579, 0)*CFrame.Angles(-0, -0, -1) 
+				AccessoryWeld.Name = "AccessoryWeld" 
+				AccessoryWeld.Parent = Handle 
+				AccessoryWeld.Part0 = Handle 
+				AccessoryWeld.Part1 = plr.Character.Head
+			end
+		elseif msg == "cone_what" then
+			if plr.Character:FindFirstChild("Model1") then
+	
+			else
+				if plr.Character:FindFirstChild("LowerTorso") then --If R15
+					local model1 = Instance.new("Model")
+					local mdrod = Instance.new("Motor6D")
+					local mdorbs = Instance.new("Motor6D")
+					local model = Instance.new("Model")
+					local orbs = Instance.new("Model")
+					local mdorbs2 = Instance.new("Part")
+					local weld3 = Instance.new("Weld")
+					local rod = Instance.new("Model")
+					local weld6 = Instance.new("Weld")
+					local mdrod4 = Instance.new("Part")
+					local weld7 = Instance.new("Weld")
+					local weld_special = Instance.new("Weld")
+					local weld = Instance.new("Weld")
+					local particle = Instance.new("Part")
+					local particles = Instance.new("ParticleEmitter")
+					local color = Instance.new("Part")
+					local color5 = Instance.new("Part")
+					model1.WorldPivot = CFrame.fromMatrix(Vector3.new(-15.071349143981934, 1.7430099248886108, -20.591266632080078), Vector3.new(0.053429652005434036, -0.9971380233764648, 0.053488895297050476), Vector3.new(0.7050533890724182, 0.07560279965400696, 0.7051126956939697), Vector3.new(-0.7071385979652405, 0.00003861229197354987, 0.7070749402046204))
+					model1.Name = "Model1"
+					model1.Parent = plr.Character
+	
+					mdrod.C0 = CFrame.new(0, 0, -0.5, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+					mdrod.C1 = CFrame.fromMatrix(Vector3.new(-0.000013202075933804736, 0.12713804841041565, 0.1519920527935028), Vector3.new(1, 9.65296408139693e-07, -0.000002354381649638526), Vector3.new(-9.652909511714824e-07, 1, 0.000002301283529959619), Vector3.new(0.0000023543843781226315, -0.0000023012812562228646, 1))
+					mdrod.Part0 = plr.Character.LowerTorso
+					mdrod.Part1 = mdrod4
+					mdrod.Name = "MDRod"
+					mdrod.Parent = model1
+	
+					mdorbs.C0 = CFrame.new(0, 0, -0.5, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+					mdorbs.C1 = CFrame.fromMatrix(Vector3.new(-0.000010736147487477865, 0.12713849544525146, 0.1519942730665207), Vector3.new(0.9999991059303284, 4.906688673145254e-07, -0.0000018477420553608681), Vector3.new(4.976238869858207e-07, 0.9999999403953552, 0.0000010586961707304), Vector3.new(-0.0000019073464727625833, 0.000001068152641892084, 0.999996542930603))
+					mdorbs.Part0 = plr.Character.LowerTorso
+					mdorbs.Part1 = mdorbs2
+					mdorbs.Name = "MDOrbs"
+					mdorbs.Parent = model1
+	
+					model.WorldPivot = CFrame.fromMatrix(Vector3.new(-15.10744571685791, 1.7391419410705566, -20.627365112304688), Vector3.new(0.053430717438459396, -0.9971378445625305, 0.053491074591875076), Vector3.new(0.7050548791885376, 0.07560509443283081, 0.7051109075546265), Vector3.new(-0.7071369290351868, 0.000039577484130859375, 0.7070766091346741))
+					model.Parent = model1
+	
+					orbs.WorldPivot = CFrame.fromMatrix(Vector3.new(1369.02294921875, -42687.71875, 13115.0419921875), Vector3.new(-0.9999958276748657, -0.001999979605898261, -0.002004384994506836), Vector3.new(-0.0024504363536834717, 0.9659722447395325, 0.25863438844680786), Vector3.new(0.0014189183712005615, 0.25863829255104065, -0.9659731388092041))
+					orbs.Name = "Orbs"
+					orbs.Parent = model
+	
+					mdorbs2.BottomSurface = Enum.SurfaceType.Smooth
+					mdorbs2.BrickColor = BrickColor.new(1, 0, 0)
+					mdorbs2.CFrame = CFrame.fromMatrix(Vector3.new(-15.918970108032227, 1.8728654384613037, -21.438961029052734), Vector3.new(-0.7071047425270081, 4.976238869858207e-07, 0.7071074843406677), Vector3.new(-0.000001102253236240358, 0.9999999403953552, -4.083426574652549e-07), Vector3.new(-0.7071030139923096, 0.0000010586961707304, -0.7071056365966797))
+					mdorbs2.CollisionGroup = "Players"
+					mdorbs2.Color = Color3.new(1, 0, 0)
+					mdorbs2.Orientation = Vector3.new(0, -135, 0)
+					mdorbs2.Rotation = Vector3.new(180, -45, 180)
+					mdorbs2.Size = Vector3.new(0.27795612812042236, 0.27795612812042236, 0.27795612812042236)
+					mdorbs2.TopSurface = Enum.SurfaceType.Smooth
+					mdorbs2.Size = Vector3.new(0.27795612812042236, 0.27795612812042236, 0.27795612812042236)
+					mdorbs2.Name = "MDOrbs2"
+					mdorbs2.Parent = orbs
+	
+					weld3.Part0 = mdorbs2
+					weld3.Part1 = mdorbs2
+					weld3.Name = "Weld3"
+					weld3.Parent = mdorbs2
+	
+					rod.WorldPivot = CFrame.fromMatrix(Vector3.new(1368.98779296875, -42687.203125, 13114.482421875), Vector3.new(-0.00003793835639953613, -0.4298686981201172, 0.9028915166854858), Vector3.new(1.4901161193847656e-08, -0.9028913974761963, -0.4298686683177948), Vector3.new(0.9999998807907104, -0.000016333035091520287, 0.000034183263778686523))
+					rod.Name = "Rod"
+					rod.Parent = model
+	
+					mdrod4.BottomSurface = Enum.SurfaceType.Smooth
+					mdrod4.BrickColor = BrickColor.new(1, 0, 0)
+					mdrod4.CFrame = CFrame.fromMatrix(Vector3.new(-15.918972969055176, 1.8728656768798828, -21.438961029052734), Vector3.new(-0.7071084380149841, -9.652909511714824e-07, 0.7071051001548767), Vector3.new(9.446839044358057e-07, 1, 0.000002309819137735758), Vector3.new(-0.7071051001548767, 0.000002301283529959619, -0.7071084380149841))
+					mdrod4.CollisionGroup = "Players"
+					mdrod4.Color = Color3.new(1, 0, 0)
+					mdrod4.Orientation = Vector3.new(0, -135, 0)
+					mdrod4.Rotation = Vector3.new(180, -45, 180)
+					mdrod4.Size = Vector3.new(0.2463761270046234, 0.2463761270046234, 0.2463761270046234)
+					mdrod4.TopSurface = Enum.SurfaceType.Smooth
+					mdrod4.Size = Vector3.new(0.2463761270046234, 0.2463761270046234, 0.2463761270046234)
+					mdrod4.Name = "MDRod4"
+					mdrod4.Parent = rod
+	
+					weld6.Part0 = mdrod4
+					weld6.Part1 = mdrod4
+					weld6.Name = "Weld6"
+					weld6.Parent = mdrod4
+	
+					weld7.C1 = CFrame.fromMatrix(Vector3.new(-0.20358115434646606, -0.1642221212387085, 0), Vector3.new(5.960464477539062e-07, -8.046627044677734e-07, 1.000000238418579), Vector3.new(-0.9994734525680542, -0.03245401382446289, 8.046627044677734e-07), Vector3.new(0.0324537456035614, -0.9994734525680542, -0.0000010728836059570312))
+					weld7.Part0 = mdrod4
+					weld7.Part1 = color
+					weld7.Name = "Weld7"
+					weld7.Parent = mdrod4
+	
+					weld_special.C1 = CFrame.fromMatrix(Vector3.new(-0.0027144153136759996, -1.4121745824813843, 0.004071623086929321), Vector3.new(0.00004267692565917969, 0.000039577484130859375, 1), Vector3.new(-0.9971378445625305, 0.07560509443283081, 0.000039577484130859375), Vector3.new(-0.0756051242351532, -0.9971378445625305, 0.00004267692565917969))
+					weld_special.Part0 = mdrod4
+					weld_special.Part1 = color5
+					weld_special.Name = "WeldSpecial"
+					weld_special.Parent = mdrod4
+	
+					weld.C1 = CFrame.fromMatrix(Vector3.new(0, -1.1162068843841553, 0), Vector3.new(1, 0, 0), Vector3.new(0, 1, 0), Vector3.new(0, 0, 1))
+					weld.Part0 = color5
+					weld.Part1 = particle
+					weld.Parent = mdrod4
+	
+					particle.BottomSurface = Enum.SurfaceType.Smooth
+					particle.BrickColor = BrickColor.new(1, 0.5803921818733215, 0.5803921818733215)
+					particle.CFrame = CFrame.fromMatrix(Vector3.new(-14.133304595947266, 2.0613114833831787, -19.65890121459961), Vector3.new(0.053429652005434036, -0.9971380233764648, 0.053488895297050476), Vector3.new(0.7050533890724182, 0.07560279965400696, 0.7051126956939697), Vector3.new(-0.7071385979652405, 0.00003861229197354987, 0.7070749402046204))
+					particle.CollisionGroup = "Players"
+					particle.Color = Color3.new(1, 0.580392, 0.580392)
+					particle.Material = Enum.Material.SmoothPlastic
+					particle.Orientation = Vector3.new(-0.0020000000949949026, -45.00299835205078, -85.66400146484375)
+					particle.Rotation = Vector3.new(-0.003000000026077032, -45.00299835205078, -85.66600036621094)
+					particle.Size = Vector3.new(0.17975522577762604, 0.3086470365524292, 0.15130357444286346)
+					particle.TopSurface = Enum.SurfaceType.Smooth
+					particle.Size = Vector3.new(0.17975522577762604, 0.3086470365524292, 0.15130357444286346)
+					particle.Name = "Particle"
+					particle.Parent = rod
+					particle.Transparency = 1
+	
+					particles.Acceleration = Vector3.new(0, -20.846710205078125, 0)
+					particles.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 0.921569, 0.921569)), ColorSequenceKeypoint.new(1, Color3.new(1, 0.921569, 0.921569))})
+					particles.Lifetime = NumberRange.new(1, 1.5)
+					particles.LightInfluence = 0.699999988079071
+					particles.Orientation = Enum.ParticleOrientation.VelocityParallel
+					particles.Rate = 45
+					particles.Rotation = NumberRange.new(90, 90)
+					particles.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.11118245124816895), NumberSequenceKeypoint.new(0.800000011920929, 0.11118245124816895), NumberSequenceKeypoint.new(1, 0)})
+					particles.Speed = NumberRange.new(5.559122562408447, 8.33868408203125)
+					particles.SpreadAngle = Vector2.new(20, 20)
+					particles.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(1, 3)})
+					particles.Texture = "rbxassetid://3202767053"
+					particles.Name = "Particles"
+					particles.Parent = particle
+					particles.Enabled = false
+	
+					color.BrickColor = BrickColor.new(0.9725490808486938, 0.9725490808486938, 0.9725490808486938)
+					color.CFrame = CFrame.fromMatrix(Vector3.new(-15.807583808898926, 1.6640616655349731, -21.327571868896484), Vector3.new(-0.022949574515223503, -0.9994733929634094, -0.022950204089283943), Vector3.new(0.7067332863807678, -0.03245631232857704, 0.7067354321479797), Vector3.new(-0.7071078419685364, -1.606309467661049e-07, 0.7071060538291931))
+					color.CollisionGroup = "Players"
+					color.Color = Color3.new(1, 1, 1)
+					color.Material = Enum.Material.SmoothPlastic
+					color.Orientation = Vector3.new(0, -45, -91.86000061035156)
+					color.Rotation = Vector3.new(0, -45, -91.86000061035156)
+					color.Size = Vector3.new(1.307639718055725, 0.7692020535469055, 0.999366819858551)
+					color.Size = Vector3.new(1.307639718055725, 0.7692020535469055, 0.999366819858551)
+					color.Name = "color"
+					color.Parent = rod
+					local MeshReplacement = Instance.new("SpecialMesh")
+					MeshReplacement.Parent = color
+					MeshReplacement.Scale = Vector3.new(1.35, 1.35, 1.35)
+					MeshReplacement.MeshType = Enum.MeshType.FileMesh
+					MeshReplacement.MeshId = "rbxassetid://6948501038"
+					--color.MeshId = "rbxassetid://6948501898"
+					color.Color = plr.Character.LowerTorso.Color
+	
+					color5.BrickColor = BrickColor.new(1, 0.3490196168422699, 0.3490196168422699)
+					color5.CFrame = CFrame.fromMatrix(Vector3.new(-14.920289993286133, 1.9769232273101807, -20.445953369140625), Vector3.new(0.053429652005434036, -0.9971380233764648, 0.053488895297050476), Vector3.new(0.7050533890724182, 0.07560279965400696, 0.7051126956939697), Vector3.new(-0.7071385979652405, 0.00003861229197354987, 0.7070749402046204))
+					color5.CollisionGroup = "Players"
+					color5.Color = Color3.new(0.937255, 0.380392, 0.380392)
+					color5.Material = Enum.Material.SmoothPlastic
+					color5.Orientation = Vector3.new(-0.0020000000949949026, -45.00299835205078, -85.66400146484375)
+					color5.Rotation = Vector3.new(-0.003000000026077032, -45.00299835205078, -85.66600036621094)
+					color5.Size = Vector3.new(0.7394983172416687, 2.049058437347412, 0.7059916257858276)
+					color5.Size = Vector3.new(0.7394983172416687, 2.049058437347412, 0.7059916257858276)
+					color5.Name = "color5"
+					color5.Parent = rod
+					local MeshReplacement = Instance.new("SpecialMesh")
+					MeshReplacement.Parent = color5
+					MeshReplacement.Scale = Vector3.new(1.46, 1.46, 1.46)
+					MeshReplacement.MeshType = Enum.MeshType.FileMesh
+					MeshReplacement.MeshId = "rbxassetid://6948501898"
+					if plr:FindFirstChild("CustomColor") then
+						color5.Color = plr.CustomColor.Value
+						else
+						color5.Color = Color3.fromRGB(239, 97, 97)
+						warn("Failed to catch D Color")
+						end
+					--color5.MeshId = "rbxassetid://6948501898"
+	
+					local script = Instance.new("Script")
+					script.Disabled = true
+					script.Parent = rod
+	
+					--//Modules
+	
+	
+					local modules = {}
+	
+					--// Scripts
+	
+					-- Script
+					task.spawn(function()
+						local script = script
+						script.Disabled = true
+						script:GetPropertyChangedSignal("Disabled"):Wait()
+	
+						local oldreq = require
+						local function require(target)
+							if modules[target] then
+								return modules[target]()
+							end
+							return oldreq(target)
+						end
+	
+						task.wait(14)
+						task.spawn(function()
+							for i = 1,40 do
+								script.Parent.M6DRod.WeldSpecial.C0 = CFrame.new(0, -0.0649999976, 0, 1, 0, 0, 0, 0.98480773, -0.173648193, 0, 0.173648193, 0.98480773)
+								wait()
+								game:GetService("TweenService"):Create(script.Parent.M6DRod.WeldSpecial, TweenInfo.new(0.6), {C0 = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)}):Play()
+								task.wait(0.85)
+							end
+						end)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+	
+					end)
+	
+					color.CanCollide = false
+					color5.CanCollide = false
+					particle.CanCollide = false
+					mdrod4.CanCollide = false
+				else
+						--[[
+			Roblox2Lua
+			----------
+			
+			This code was generated using
+			Deluct's Roblox2Lua plugin.
+		]]--
+	
+					--// Instances
+	
+					local model1 = Instance.new("Model")
+					local mdrod = Instance.new("Motor6D")
+					local mdorbs = Instance.new("Motor6D")
+					local model = Instance.new("Model")
+					local orbs = Instance.new("Model")
+					local mdorbs2 = Instance.new("Part")
+					local weld3 = Instance.new("Weld")
+					local rod = Instance.new("Model")
+					local weld6 = Instance.new("Weld")
+					local mdrod4 = Instance.new("Part")
+					local weld7 = Instance.new("Weld")
+					local weld_special = Instance.new("Weld")
+					local weld = Instance.new("Weld")
+					local particle = Instance.new("Part")
+					local particles = Instance.new("ParticleEmitter")
+					local color = Instance.new("Part")
+					local color5 = Instance.new("Part")
+					model1.WorldPivot = CFrame.fromMatrix(Vector3.new(-15.071349143981934, 1.7430099248886108, -20.591266632080078), Vector3.new(0.053429652005434036, -0.9971380233764648, 0.053488895297050476), Vector3.new(0.7050533890724182, 0.07560279965400696, 0.7051126956939697), Vector3.new(-0.7071385979652405, 0.00003861229197354987, 0.7070749402046204))
+					model1.Name = "Model1"
+					model1.Parent = plr.Character
+	
+					mdrod.C0 = CFrame.fromMatrix(Vector3.new(0, -1, -0.5), Vector3.new(1, 0, 0), Vector3.new(0, 1, 0), Vector3.new(0, 0, 1))
+					mdrod.C1 = CFrame.fromMatrix(Vector3.new(-0.000013202075933804736, 0.12713804841041565, 0.1519920527935028), Vector3.new(1, 9.65296408139693e-07, -0.000002354381649638526), Vector3.new(-9.652909511714824e-07, 1, 0.000002301283529959619), Vector3.new(0.0000023543843781226315, -0.0000023012812562228646, 1))
+					mdrod.Part0 = plr.Character.Torso
+					mdrod.Part1 = mdrod4
+					mdrod.Name = "MDRod"
+					mdrod.Parent = model1
+	
+					mdorbs.C0 = CFrame.fromMatrix(Vector3.new(0, -1, -0.5), Vector3.new(1, 0, 0), Vector3.new(0, 1, 0), Vector3.new(0, 0, 1))
+					mdorbs.C1 = CFrame.fromMatrix(Vector3.new(-0.000010736147487477865, 0.12713849544525146, 0.1519942730665207), Vector3.new(0.9999991059303284, 4.906688673145254e-07, -0.0000018477420553608681), Vector3.new(4.976238869858207e-07, 0.9999999403953552, 0.0000010586961707304), Vector3.new(-0.0000019073464727625833, 0.000001068152641892084, 0.999996542930603))
+					mdorbs.Part0 = plr.Character.Torso
+					mdorbs.Part1 = mdorbs2
+					mdorbs.Name = "MDOrbs"
+					mdorbs.Parent = model1
+	
+					model.WorldPivot = CFrame.fromMatrix(Vector3.new(-15.10744571685791, 1.7391419410705566, -20.627365112304688), Vector3.new(0.053430717438459396, -0.9971378445625305, 0.053491074591875076), Vector3.new(0.7050548791885376, 0.07560509443283081, 0.7051109075546265), Vector3.new(-0.7071369290351868, 0.000039577484130859375, 0.7070766091346741))
+					model.Parent = model1
+	
+					orbs.WorldPivot = CFrame.fromMatrix(Vector3.new(1369.02294921875, -42687.71875, 13115.0419921875), Vector3.new(-0.9999958276748657, -0.001999979605898261, -0.002004384994506836), Vector3.new(-0.0024504363536834717, 0.9659722447395325, 0.25863438844680786), Vector3.new(0.0014189183712005615, 0.25863829255104065, -0.9659731388092041))
+					orbs.Name = "Orbs"
+					orbs.Parent = model
+	
+					mdorbs2.BottomSurface = Enum.SurfaceType.Smooth
+					mdorbs2.BrickColor = BrickColor.new(1, 0, 0)
+					mdorbs2.CFrame = CFrame.fromMatrix(Vector3.new(-15.918970108032227, 1.8728654384613037, -21.438961029052734), Vector3.new(-0.7071047425270081, 4.976238869858207e-07, 0.7071074843406677), Vector3.new(-0.000001102253236240358, 0.9999999403953552, -4.083426574652549e-07), Vector3.new(-0.7071030139923096, 0.0000010586961707304, -0.7071056365966797))
+					mdorbs2.CollisionGroup = "Players"
+					mdorbs2.Color = Color3.new(1, 0, 0)
+					mdorbs2.Orientation = Vector3.new(0, -135, 0)
+					mdorbs2.Rotation = Vector3.new(180, -45, 180)
+					mdorbs2.Size = Vector3.new(0.27795612812042236, 0.27795612812042236, 0.27795612812042236)
+					mdorbs2.TopSurface = Enum.SurfaceType.Smooth
+					mdorbs2.Size = Vector3.new(0.27795612812042236, 0.27795612812042236, 0.27795612812042236)
+					mdorbs2.Name = "MDOrbs2"
+					mdorbs2.Parent = orbs
+	
+					weld3.Part0 = mdorbs2
+					weld3.Part1 = mdorbs2
+					weld3.Name = "Weld3"
+					weld3.Parent = mdorbs2
+	
+					rod.WorldPivot = CFrame.fromMatrix(Vector3.new(1368.98779296875, -42687.203125, 13114.482421875), Vector3.new(-0.00003793835639953613, -0.4298686981201172, 0.9028915166854858), Vector3.new(1.4901161193847656e-08, -0.9028913974761963, -0.4298686683177948), Vector3.new(0.9999998807907104, -0.000016333035091520287, 0.000034183263778686523))
+					rod.Name = "Rod"
+					rod.Parent = model
+	
+					mdrod4.BottomSurface = Enum.SurfaceType.Smooth
+					mdrod4.BrickColor = BrickColor.new(1, 0, 0)
+					mdrod4.CFrame = CFrame.fromMatrix(Vector3.new(-15.918972969055176, 1.8728656768798828, -21.438961029052734), Vector3.new(-0.7071084380149841, -9.652909511714824e-07, 0.7071051001548767), Vector3.new(9.446839044358057e-07, 1, 0.000002309819137735758), Vector3.new(-0.7071051001548767, 0.000002301283529959619, -0.7071084380149841))
+					mdrod4.CollisionGroup = "Players"
+					mdrod4.Color = Color3.new(1, 0, 0)
+					mdrod4.Orientation = Vector3.new(0, -135, 0)
+					mdrod4.Rotation = Vector3.new(180, -45, 180)
+					mdrod4.Size = Vector3.new(0.2463761270046234, 0.2463761270046234, 0.2463761270046234)
+					mdrod4.TopSurface = Enum.SurfaceType.Smooth
+					mdrod4.Size = Vector3.new(0.2463761270046234, 0.2463761270046234, 0.2463761270046234)
+					mdrod4.Name = "MDRod4"
+					mdrod4.Parent = rod
+	
+					weld6.Part0 = mdrod4
+					weld6.Part1 = mdrod4
+					weld6.Name = "Weld6"
+					weld6.Parent = mdrod4
+	
+					weld7.C1 = CFrame.fromMatrix(Vector3.new(-0.20358115434646606, -0.1642221212387085, 0), Vector3.new(5.960464477539062e-07, -8.046627044677734e-07, 1.000000238418579), Vector3.new(-0.9994734525680542, -0.03245401382446289, 8.046627044677734e-07), Vector3.new(0.0324537456035614, -0.9994734525680542, -0.0000010728836059570312))
+					weld7.Part0 = mdrod4
+					weld7.Part1 = color
+					weld7.Name = "Weld7"
+					weld7.Parent = mdrod4
+	
+					weld_special.C1 = CFrame.fromMatrix(Vector3.new(-0.0027144153136759996, -1.4121745824813843, 0.004071623086929321), Vector3.new(0.00004267692565917969, 0.000039577484130859375, 1), Vector3.new(-0.9971378445625305, 0.07560509443283081, 0.000039577484130859375), Vector3.new(-0.0756051242351532, -0.9971378445625305, 0.00004267692565917969))
+					weld_special.Part0 = mdrod4
+					weld_special.Part1 = color5
+					weld_special.Name = "WeldSpecial"
+					weld_special.Parent = mdrod4
+	
+					weld.C1 = CFrame.fromMatrix(Vector3.new(0, -1.1162068843841553, 0), Vector3.new(1, 0, 0), Vector3.new(0, 1, 0), Vector3.new(0, 0, 1))
+					weld.Part0 = color5
+					weld.Part1 = particle
+					weld.Parent = mdrod4
+	
+					particle.BottomSurface = Enum.SurfaceType.Smooth
+					particle.BrickColor = BrickColor.new(1, 0.5803921818733215, 0.5803921818733215)
+					particle.CFrame = CFrame.fromMatrix(Vector3.new(-14.133304595947266, 2.0613114833831787, -19.65890121459961), Vector3.new(0.053429652005434036, -0.9971380233764648, 0.053488895297050476), Vector3.new(0.7050533890724182, 0.07560279965400696, 0.7051126956939697), Vector3.new(-0.7071385979652405, 0.00003861229197354987, 0.7070749402046204))
+					particle.CollisionGroup = "Players"
+					particle.Color = Color3.new(1, 0.580392, 0.580392)
+					particle.Material = Enum.Material.SmoothPlastic
+					particle.Orientation = Vector3.new(-0.0020000000949949026, -45.00299835205078, -85.66400146484375)
+					particle.Rotation = Vector3.new(-0.003000000026077032, -45.00299835205078, -85.66600036621094)
+					particle.Size = Vector3.new(0.17975522577762604, 0.3086470365524292, 0.15130357444286346)
+					particle.TopSurface = Enum.SurfaceType.Smooth
+					particle.Size = Vector3.new(0.17975522577762604, 0.3086470365524292, 0.15130357444286346)
+					particle.Name = "Particle"
+					particle.Parent = rod
+					particle.Transparency = 1
+	
+					particles.Acceleration = Vector3.new(0, -20.846710205078125, 0)
+					particles.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1, 0.921569, 0.921569)), ColorSequenceKeypoint.new(1, Color3.new(1, 0.921569, 0.921569))})
+					particles.Lifetime = NumberRange.new(1, 1.5)
+					particles.LightInfluence = 0.699999988079071
+					particles.Orientation = Enum.ParticleOrientation.VelocityParallel
+					particles.Rate = 45
+					particles.Rotation = NumberRange.new(90, 90)
+					particles.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.11118245124816895), NumberSequenceKeypoint.new(0.800000011920929, 0.11118245124816895), NumberSequenceKeypoint.new(1, 0)})
+					particles.Speed = NumberRange.new(5.559122562408447, 8.33868408203125)
+					particles.SpreadAngle = Vector2.new(20, 20)
+					particles.Squash = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(1, 3)})
+					particles.Texture = "rbxassetid://3202767053"
+					particles.Name = "Particles"
+					particles.Parent = particle
+					particles.Enabled = false
+	
+					color.BrickColor = BrickColor.new(0.9725490808486938, 0.9725490808486938, 0.9725490808486938)
+					color.CFrame = CFrame.fromMatrix(Vector3.new(-15.807583808898926, 1.6640616655349731, -21.327571868896484), Vector3.new(-0.022949574515223503, -0.9994733929634094, -0.022950204089283943), Vector3.new(0.7067332863807678, -0.03245631232857704, 0.7067354321479797), Vector3.new(-0.7071078419685364, -1.606309467661049e-07, 0.7071060538291931))
+					color.CollisionGroup = "Players"
+					color.Color = Color3.new(1, 1, 1)
+					color.Material = Enum.Material.SmoothPlastic
+					color.Orientation = Vector3.new(0, -45, -91.86000061035156)
+					color.Rotation = Vector3.new(0, -45, -91.86000061035156)
+					color.Size = Vector3.new(1.307639718055725, 0.7692020535469055, 0.999366819858551)
+					color.Size = Vector3.new(1.307639718055725, 0.7692020535469055, 0.999366819858551)
+					color.Name = "color"
+					color.Parent = rod
+					local MeshReplacement = Instance.new("SpecialMesh")
+					MeshReplacement.Parent = color
+					MeshReplacement.Scale = Vector3.new(1.35, 1.35, 1.35)
+					MeshReplacement.MeshType = Enum.MeshType.FileMesh
+					MeshReplacement.MeshId = "rbxassetid://6948501038"
+					--color.MeshId = "rbxassetid://6948501898"
+					color.Color = plr.Character.Torso.Color
+	
+					color5.BrickColor = BrickColor.new(1, 0.3490196168422699, 0.3490196168422699)
+					color5.CFrame = CFrame.fromMatrix(Vector3.new(-14.920289993286133, 1.9769232273101807, -20.445953369140625), Vector3.new(0.053429652005434036, -0.9971380233764648, 0.053488895297050476), Vector3.new(0.7050533890724182, 0.07560279965400696, 0.7051126956939697), Vector3.new(-0.7071385979652405, 0.00003861229197354987, 0.7070749402046204))
+					color5.CollisionGroup = "Players"
+					color5.Color = Color3.new(0.937255, 0.380392, 0.380392)
+					color5.Material = Enum.Material.SmoothPlastic
+					color5.Orientation = Vector3.new(-0.0020000000949949026, -45.00299835205078, -85.66400146484375)
+					color5.Rotation = Vector3.new(-0.003000000026077032, -45.00299835205078, -85.66600036621094)
+					color5.Size = Vector3.new(0.7394983172416687, 2.049058437347412, 0.7059916257858276)
+					color5.Size = Vector3.new(0.7394983172416687, 2.049058437347412, 0.7059916257858276)
+					color5.Name = "color5"
+					color5.Parent = rod
+					local ProximityPrompt = Instance.new("ProximityPrompt",color5)
+					ProximityPrompt.HoldDuration = 2
+					ProximityPrompt.ActionText = "Suck Dick [BETA]"
+					ProximityPrompt.RequiresLineOfSight = false
+					ProximityPrompt.ObjectText = "Suck"
+					ProximityPrompt.Triggered:Connect(function(plr)
+						if plr == game.Players.LocalPlayer then
+							game:GetService'Players':Chat(("cone_yae|"..model1.Parent.Name))
+						end
+					end)
+					local MeshReplacement = Instance.new("SpecialMesh")
+					MeshReplacement.Parent = color5
+					MeshReplacement.Scale = Vector3.new(1.46, 1.46, 1.46)
+					MeshReplacement.MeshType = Enum.MeshType.FileMesh
+					MeshReplacement.MeshId = "rbxassetid://6948501898"
+					if plr:FindFirstChild("CustomColor") then
+						color5.Color = plr.CustomColor.Value
+					else
+						color5.Color = Color3.fromRGB(239, 97, 97)
+						warn("Failed to catch D Color")
+					end
+					--color5.MeshId = "rbxassetid://6948501898"
+	
+					local script = Instance.new("Script")
+					script.Disabled = true
+					script.Parent = rod
+	
+					--//Modules
+	
+	
+					local modules = {}
+	
+					--// Scripts
+	
+					-- Script
+					task.spawn(function()
+						local script = script
+						script.Disabled = true
+						script:GetPropertyChangedSignal("Disabled"):Wait()
+	
+						local oldreq = require
+						local function require(target)
+							if modules[target] then
+								return modules[target]()
+							end
+							return oldreq(target)
+						end
+	
+						task.wait(14)
+						task.spawn(function()
+							for i = 1,40 do
+								script.Parent.M6DRod.WeldSpecial.C0 = CFrame.new(0, -0.0649999976, 0, 1, 0, 0, 0, 0.98480773, -0.173648193, 0, 0.173648193, 0.98480773)
+								wait()
+								game:GetService("TweenService"):Create(script.Parent.M6DRod.WeldSpecial, TweenInfo.new(0.6), {C0 = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)}):Play()
+								task.wait(0.85)
+							end
+						end)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+						script.Parent.Particle1.Particles:Emit()
+						task.wait(0.85)
+	
+					end)
+	
+					color.CanCollide = false
+					color5.CanCollide = false
+					particle.CanCollide = false
+					mdrod4.CanCollide = false
+				end
+			end
+		elseif msg == "cone_woah" then
+			local script = plr.Character:WaitForChild("Model1").Model.Rod.Script
+			task.spawn(function()
+				for i = 1,40 do
+					script.Parent.MDRod4.WeldSpecial.C0 = CFrame.new(0, -0.0649999976, 0, 1, 0, 0, 0, 0.98480773, -0.173648193, 0, 0.173648193, 0.98480773)
+					--local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+					--local ColorCorrection = Instance.new("ColorCorrectionEffect")
+					if plr == game.Players.LocalPlayer then
+						--ColorCorrection.Parent = game.Lighting
+						--game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						--ColorCorrection.Brightness = 0.06
+						end
+					wait()
+					game:GetService("TweenService"):Create(script.Parent.MDRod4.WeldSpecial, TweenInfo.new(0.65), {C0 = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)}):Play()
+					if plr == game.Players.LocalPlayer then
+						--game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						--game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+					task.wait(0.85)
+				end
+			end)
+			local ColorCorrection = Instance.new("ColorCorrectionEffect")
+			ColorCorrection.Parent = game.Lighting
+			script.Parent.Particle.Particles:Emit()
+			task.spawn(function()
+				if plr == game.Players.LocalPlayer then
+					local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+					game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+					ColorCorrection.Brightness = 0.06
+					wait()
+					game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+					game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+				end
+			end)
+			task.wait(0.85)
+			script.Parent.Particle.Particles:Emit()
+			task.spawn(function()
+				if plr == game.Players.LocalPlayer then
+					local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+					game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+					ColorCorrection.Brightness = 0.06
+					wait()
+					game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+					game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+				end
+			end)
+			task.wait(0.85)
+			script.Parent.Particle.Particles:Emit()
+			task.spawn(function()
+				if plr == game.Players.LocalPlayer then
+					local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+					game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+					ColorCorrection.Brightness = 0.06
+					wait()
+					game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+					game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+				end
+			end)
+			task.wait(0.85)
+			script.Parent.Particle.Particles:Emit()
+			task.spawn(function()
+				if plr == game.Players.LocalPlayer then
+					local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+					game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+					ColorCorrection.Brightness = 0.06
+					wait()
+					game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+					game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+				end
+			end)
+			task.wait(0.85)
+			script.Parent.Particle.Particles:Emit()
+			task.spawn(function()
+				if plr == game.Players.LocalPlayer then
+					local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+					game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+					ColorCorrection.Brightness = 0.06
+					wait()
+					game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+					game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+				end
+			end)
+			task.wait(0.85)
+			script.Parent.Particle.Particles:Emit()
+			task.spawn(function()
+				if plr == game.Players.LocalPlayer then
+					local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+					game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+					ColorCorrection.Brightness = 0.06
+					wait()
+					game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+					game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+				end
+			end)
+		elseif msg == "cone_yo" then
+			plr.Character.Shirt.Parent = game:GetService("CoreGui")
+			plr.Character.Pants.Parent = game:GetService("CoreGui")
+		elseif tostring(msg):split("|")[1] == "cone_yae" then
+			local NewPlr = game.Players:WaitForChild(""..tostring(msg):split("|")[2],30)
+			if NewPlr == plr then
+				
+			else
+			--CONVERTED WITH CONE--
+			local A1 = Instance.new("Attachment",NewPlr.Character:WaitForChild("HumanoidRootPart",30))
+			local A2 = Instance.new("Attachment",NewPlr.Character:WaitForChild("HumanoidRootPart",30))
+			A1.Name = "A1"
+			A2.Name = "A2"
+			
+			A1.CFrame = CFrame.new(0, -2.28000498, -4.00000191, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1)
+			A2.CFrame = CFrame.new(0, -2.27999997, -2.5, -1, 0, -8.74227766e-08, 0, 1, 0, 8.74227766e-08, 0, -1)
+				--CONVERTED WITH CONE--
+				plr.Character:WaitForChild("HumanoidRootPart",30).Anchored = true
+				NewPlr.Character:WaitForChild("HumanoidRootPart",30).Anchored = true
+				plr.Character:WaitForChild("HumanoidRootPart",30).CFrame = A1.WorldCFrame
+				for i = 1,math.random(25,30) do
+					game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.5,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A2.WorldCFrame}):Play()
+					task.wait(0.7)
+					game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.5,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A1.WorldCFrame}):Play()
+					task.wait(0.6)
+				end
+				
+				for i = 1,math.random(25,30) do
+					game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.3,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A2.WorldCFrame}):Play()
+					task.wait(0.5)
+					game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.3,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A1.WorldCFrame}):Play()
+					task.wait(0.3)
+				end
+				
+				game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.3,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A2.WorldCFrame}):Play()
+				task.wait(3)
+				game:GetService("TweenService"):Create(plr.Character:WaitForChild("HumanoidRootPart",30), TweenInfo.new(0.3,Enum.EasingStyle.Cubic,Enum.EasingDirection.InOut,0,false,0), {CFrame = A1.WorldCFrame}):Play()
+				local script = NewPlr.Character:WaitForChild("Model1").Model.Rod.Script
+				task.spawn(function()
+					for i = 1,40 do
+						script.Parent.MDRod4.WeldSpecial.C0 = CFrame.new(0, -0.0649999976, 0, 1, 0, 0, 0, 0.98480773, -0.173648193, 0, 0.173648193, 0.98480773)
+						--local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						--local ColorCorrection = Instance.new("ColorCorrectionEffect")
+						if NewPlr == game.Players.LocalPlayer then
+							--ColorCorrection.Parent = game.Lighting
+							--game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+							--ColorCorrection.Brightness = 0.06
+						end
+						wait()
+						game:GetService("TweenService"):Create(script.Parent.MDRod4.WeldSpecial, TweenInfo.new(0.65), {C0 = CFrame.new(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)}):Play()
+						if NewPlr == game.Players.LocalPlayer then
+							--game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+							--game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+						end
+						task.wait(0.85)
+					end
+				end)
+				local ColorCorrection = Instance.new("ColorCorrectionEffect")
+				ColorCorrection.Parent = game.Lighting
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				task.wait(0.85)
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				task.wait(0.85)
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				task.wait(0.85)
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				task.wait(0.85)
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				task.wait(0.85)
+				script.Parent.Particle.Particles:Emit()
+				task.spawn(function()
+					if NewPlr == game.Players.LocalPlayer then
+						local SavedFOV = game.Workspace.CurrentCamera.FieldOfView
+						game.Workspace.CurrentCamera.FieldOfView = game.Workspace.CurrentCamera.FieldOfView + 3
+						ColorCorrection.Brightness = 0.06
+						wait()
+						game:GetService("TweenService"):Create(game.Workspace.CurrentCamera, TweenInfo.new(0.65), {FieldOfView = SavedFOV}):Play()
+						game:GetService("TweenService"):Create(ColorCorrection, TweenInfo.new(0.65), {Brightness = 0}):Play()
+					end
+				end)
+				
+				task.wait(0.3)
+				plr.Character:WaitForChild("HumanoidRootPart",30).Anchored = false
+				NewPlr.Character:WaitForChild("HumanoidRootPart",30).Anchored = false
+			end
+		end
+	end
+	
+	local Ver = game:HttpGet('https://pastebin.com/raw/405jcNjy')
+	game:GetService'Players':Chat(("cone_user_join"))
+	task.wait()
+	game.Players.PlayerAdded:Connect(function(plr)
+		plr.Chatted:Connect(function(msg)
+			CommandCheck(msg,plr)
+		end)
+	end)
+	
+	for i,plr in pairs(game.Players:GetPlayers()) do
+		plr.Chatted:Connect(function(msg)
+			CommandCheck(msg,plr)
+		end)
+	end
+	
+	
+	task.spawn(function()
+		while task.wait(1) do
+			local VersionNumber = game:HttpGet('https://pastebin.com/raw/405jcNjy')
+			if "1.0.4" == VersionNumber then
+				
+			else
+				script.Parent.Parent.Parent.Outdated.Visible = true
+				break
+			end
+		end
+	end)
+end
+coroutine.wrap(SODKYAM_fake_script)()
+local function YZOJ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_woah"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(YZOJ_fake_script)()
+local function NSZWR_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_yo"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(NSZWR_fake_script)()
+local function NFVIDYT_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_what"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(NFVIDYT_fake_script)()
+local function TEHAJPK_fake_script() -- TextButton_4.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_4)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_9"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(TEHAJPK_fake_script)()
+local function FVZMXJ_fake_script() -- TextButton_5.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_5)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_7"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(FVZMXJ_fake_script)()
+local function YEXUNNZ_fake_script() -- TextButton_6.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_6)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_normal"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(YEXUNNZ_fake_script)()
+local function DSRNZ_fake_script() -- TextButton_7.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_7)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_blue"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(DSRNZ_fake_script)()
+local function YIQTA_fake_script() -- TextButton_8.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_8)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_orang"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(YIQTA_fake_script)()
+local function XNCXJNI_fake_script() -- TextButton_9.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_9)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_yellow"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(XNCXJNI_fake_script)()
+local function BFRXBGA_fake_script() -- TextButton_10.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_10)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_gnarp"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(BFRXBGA_fake_script)()
+local function RLIXQIL_fake_script() -- TextButton_11.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_11)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService'Players':Chat(("cone_dominus"))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			["Title"] = "Successful";
+			["Text"] = "Command Ran Successfully.";
+			["Duration"] = string.len("Command Ran Successfully.")*0.1;
+		})
+	end)
+end
+coroutine.wrap(RLIXQIL_fake_script)()
+local function VBCDGG_fake_script() -- TextButton_12.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_12)
+
+	local Enabled = false
+	local function RunCheck(plr)
+		local v = plr
+			if v.Character:FindFirstChild("Model1") and Enabled then
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 1
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(1)
+			else
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color5",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("color",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("MDRod4",30).Transparency = 0
+				v.Character:WaitForChild("Model1",30):WaitForChild("Model",30):WaitForChild("Rod",30):WaitForChild("Particle",30).Particles.Transparency = NumberSequence.new(0)
+			end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Enabled == false then
+			Enabled = true
+			game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(235, 171, 107)}):Play()
+			for i,v in pairs(game.Players:GetPlayers()) do
+				RunCheck(v)
+			end
+		else
+			Enabled = false
+			game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(134, 97, 61)}):Play()
+			for i,v in pairs(game.Players:GetPlayers()) do
+				RunCheck(v)
+			end
+			end
+	end)
+	
+	game.Players.PlayerAdded:Connect(function(plr)
+		plr.Character.ChildAdded:Connect(function(ins)
+			RunCheck(plr)
+			if ins.Name == "Model1" then
+				RunCheck(plr)
+			end
+		end)
+	end)
+end
+coroutine.wrap(VBCDGG_fake_script)()
+local function UAMUPBU_fake_script() -- MainCosmetics_2.Script 
+	local script = Instance.new('Script', MainCosmetics_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v:IsA("TextButton") then
+				if v == script.Parent then
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+				else
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0.5}):Play()
+				end
+			end
+		end
+		for i,v in pairs(script.Parent.Parent.Parent.Frame.Pages:GetChildren()) do
+			if v.Name == script.Parent.Name then
+				v.Visible = true
+			else
+				v.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(UAMUPBU_fake_script)()
+local function RCCWV_fake_script() -- NSFW_2.Script 
+	local script = Instance.new('Script', NSFW_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v:IsA("TextButton") then
+				if v == script.Parent then
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+				else
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0.5}):Play()
+				end
+			end
+		end
+		for i,v in pairs(script.Parent.Parent.Parent.Frame.Pages:GetChildren()) do
+			if v.Name == script.Parent.Name then
+				v.Visible = true
+			else
+				v.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(RCCWV_fake_script)()
+local function IHODTAK_fake_script() -- Settings_2.Script 
+	local script = Instance.new('Script', Settings_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(script.Parent.Parent:GetChildren()) do
+			if v:IsA("TextButton") then
+				if v == script.Parent then
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+				else
+					game:GetService("TweenService"):Create(v, TweenInfo.new(0.2), {TextTransparency = 0.5}):Play()
+				end
+			end
+		end
+		for i,v in pairs(script.Parent.Parent.Parent.Frame.Pages:GetChildren()) do
+			if v.Name == script.Parent.Name then
+				v.Visible = true
+			else
+				v.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(IHODTAK_fake_script)()
+local function IQEBC_fake_script() -- TextButton_13.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_13)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(IQEBC_fake_script)()
